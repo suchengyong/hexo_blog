@@ -1,0 +1,102 @@
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Head info
+head:
+    favicon: "/img/suchengyonglogo.png"
+    high_res_favicon: "/img/logo.jpg"
+    apple_touch_icon: "/img/logo.jpg"
+    keywords: 苏成勇个人博客,js,javascript,前端开发，css3,html5,微信小程序,博客
+
+Intro:
+    name: Cheng-yong su personal blog
+    slogan: "Whatever is worth doing is worth doing well <br/> I'll think of you every step of the way"
+    HeadButton: 欢迎来到苏成勇个人博客
+
+Nav:
+    Home_name: 主页
+    is_use_categories : true 
+    categories_name: 分类
+    is_use_archives : false  
+    archives_name: 归档
+    icon:
+        github: 
+            use: true
+            link: https://github.com/suchengyong
+        Twitter:  
+            use: true
+            link: https://simple-ui.netlify.app
+        Facebook:
+            use: true
+            link: https://suchengyong.netlify.app
+        Instagram:
+            use: false
+            link:
+    pages:
+        简历: 
+            link: "/about/"
+        团队:
+            link: "/group/"
+        图库 :
+            link: "/gallery/"
+        标签:
+            link: "/tags/"
+        #自定义标签名
+        #   link：“路径”
+
+MainFirst:
+    name: 苏成勇
+    description: 欢迎来到我的小窝,专注于技术与分享。 
+    pic_url: /images/log.jpg
+    goto_ulr: ""
+
+Gallery :
+    title: 苏成勇
+    description: 纪念册
+
+# ---------------------------------------------------------------
+# Style Settings
+# ---------------------------------------------------------------
+
+# Custom code Render System 自定义代码渲染 
+# default dark funky okaidia twilight coy solarized  可选项  
+# link to review : http://prismjs.com/index.html   官网预览
+prism: coy
+
+# Custom Fonts
+fonts: FZLTCXHJW, "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "FZLTCXHJW", Arial, sans-serif
+
+# Comment Systems
+# Available value of "use":
+#     duoshuo | disqus | disqus_click | changyan
+comment:
+    use: changyan
+    shortname: http-miccall-tech 
+    duoshuo_thread_key_type: path
+    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
+    changyan_appid: cytsgGBWa
+    changyan_conf: prod_d517f84e6eeb56312a39e3df9a6c43d8
+    changyan_thread_key_type: path
+
+# Search Systems
+# Available value:
+#     swiftype | google | local
+search:
+    use: baidu | google | local
+    swiftype_key: Just another fine responsive  
+    
+
+# Leancloud Views
+leancloud:
+    enable: false
+    app_id: #你的 app_id
+    app_key: #你的 app_key
+    av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
+
+# Busuanzi 不蒜子 Views
+busuanzi:
+    enable: true
+    all_site_uv: true
+    post_pv: true
+    busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"

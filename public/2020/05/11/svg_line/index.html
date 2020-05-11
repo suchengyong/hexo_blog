@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img5.imgtn.bdimg.com/it/u=1647314705,3126772480&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SVG绘画折线图</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h3><p>1.html代码：</p>
+<pre><code>&lt;svg viewBox=&quot;0 0 200 100&quot; id=&quot;chart&quot;&gt;
+  &lt;g transform=&quot;translate(0, 100) scale(1, -1)&quot; id=&quot;path-container&quot;&gt;
+    &lt;path fill=&quot;none&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; id=&quot;line&quot; /&gt;
+  &lt;/g&gt;
+  &lt;text text-anchor=&quot;middle&quot; alignment-baseline=&quot;middle&quot; x=&quot;100&quot; y=&quot;50&quot; class=&quot;loading&quot;&gt;
+    Loading...
+  &lt;/text&gt;
+&lt;/svg&gt;
+</code></pre><p>2，css代码：</p>
+<pre><code>body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#chart {
+  background-color: #f6f6f6;
+  width: 100%;
+  max-width: 1000px;
+
+  --stroke-length: 0;
+}
+
+#chart #line {
+  stroke: #9F3AF0;
+  stroke-dasharray: var(--stroke-length);
+  stroke-dashoffset: var(--stroke-length);
+}
+
+.name, .caption {
+  font-family: Helvetica;
+  font-size: 4px;
+  font-weight: bold;
+  fill: #999;
+
+  animation: .5s fade-in ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.values {
+  font-family: Helvetica;
+  font-size: 3px;
+}
+
+@keyframes animate-line {
+  from {
+    stroke-dashoffset: var(--stroke-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#chart.animate #line {
+  animation: 3s animate-line linear;
+  animation-fill-mode: forwards;
+  animation-delay: .3s;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#chart .point {
+  opacity: 0;
+}
+
+#chart.animate .point {
+  animation: .5s fade-in ease-in-out, .5s zoom-in ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: var(--delay);
+}
+
+#chart .values {
+  opacity: 0;
+}
+
+#chart.animate .values {
+  animation: .5s fade-in ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: var(--delay);
+}
+
+.loading {
+  font-family: Helvetica;
+  font-size: 5px;
+  fill: #999;
+
+  transition: .25s opacity ease-in-out;
+}
+
+#chart.animate .loading {
+  opacity: 0;
+}
+</code></pre><p>3,js代码：</p>
+<pre><code>let padding = 15
+let start_x = padding
+let svg_width = document.querySelector(&#39;#chart&#39;).viewBox.baseVal.width
+
+function loadData() {
+  fetch(`https://codingstartup.com/assets/svg-chart/appl.php`)
+    .then((response) =&gt; {
+      return response.json()
+    })
+    .then((data) =&gt; {
+      console.log(`api data`, data)
+      drawChart(data)
+    })
+    .catch((err) =&gt; {
+      console.log(err)
+    })
+}
+
+setTimeout(() =&gt; {
+  loadData()
+}, 1000)
+
+function drawChart(api_data) {
+  let name = document.createElementNS(&#39;http://www.w3.org/2000/svg&#39;, &#39;text&#39;)
+  name.setAttribute(&#39;text-anchor&#39;, &#39;middle&#39;)
+  name.setAttribute(&#39;alignment-baseline&#39;, &#39;middle&#39;)
+  name.setAttribute(&#39;x&#39;, svg_width / 2)
+  name.setAttribute(&#39;y&#39;, 6)
+  name.classList.add(&#39;name&#39;)
+  name.appendChild(document.createTextNode(api_data[&#39;stock_name&#39;]))
+  document.querySelector(&#39;#chart&#39;).appendChild(name)
+
+  let stock_data = api_data[&#39;data&#39;]
+  let path_data = []
+
+  for (let i in stock_data) {
+    path_data.push(`${start_x}, ${stock_data[i][&#39;normalized&#39;]}`)
+
+    let caption = document.createElementNS(&#39;http://www.w3.org/2000/svg&#39;, &#39;text&#39;)
+    caption.setAttribute(&#39;text-anchor&#39;, &#39;middle&#39;)
+    caption.setAttribute(&#39;alignment-baseline&#39;, &#39;middle&#39;)
+    caption.setAttribute(&#39;x&#39;, start_x)
+    caption.setAttribute(&#39;y&#39;, 96)
+    caption.classList.add(&#39;caption&#39;)
+    caption.appendChild(document.createTextNode(stock_data[i][&#39;date&#39;]))
+    document.querySelector(&#39;#chart&#39;).appendChild(caption)
+
+    let circle = document.createElementNS(&#39;http://www.w3.org/2000/svg&#39;, &#39;circle&#39;)
+    circle.setAttribute(&#39;cx&#39;, start_x)
+    circle.setAttribute(&#39;cy&#39;, stock_data[i][&#39;normalized&#39;])
+    circle.setAttribute(&#39;r&#39;, 3)
+    circle.setAttribute(&#39;stroke&#39;, &#39;#9F3AF0&#39;)
+    circle.setAttribute(&#39;stroke-width&#39;, 2)
+    circle.setAttribute(&#39;fill&#39;, &#39;white&#39;)
+    circle.setAttribute(&#39;transform-origin&#39;, `${start_x} ${stock_data[i][&#39;normalized&#39;]}`)
+    circle.style.setProperty(&#39;--delay&#39;, `${(3 * parseInt(i) / stock_data.length)}s`)
+    circle.classList.add(&#39;point&#39;)
+    document.querySelector(&#39;#path-container&#39;).appendChild(circle)
+
+    let value = document.createElementNS(&#39;http://www.w3.org/2000/svg&#39;, &#39;text&#39;)
+    value.setAttribute(&#39;text-anchor&#39;, &#39;middle&#39;)
+    value.setAttribute(&#39;alignment-baseline&#39;, &#39;middle&#39;)
+    value.setAttribute(&#39;x&#39;, start_x)
+    value.setAttribute(&#39;y&#39;, stock_data[i][&#39;normalized&#39;])
+    value.setAttribute(&#39;transform&#39;, `translate(0, ${stock_data[i][&#39;normalized&#39;] * 2 - 8}) scale(1, -1)`)
+    value.style.setProperty(&#39;--delay&#39;, `${(3 * parseInt(i) / stock_data.length)}s`)
+    value.classList.add(&#39;values&#39;)
+    value.appendChild(document.createTextNode(stock_data[i][&#39;index&#39;]))
+    document.querySelector(&#39;#path-container&#39;).appendChild(value)
+
+    start_x += (svg_width - padding * 2) / (stock_data.length - 1)
+  }
+
+  let line = document.querySelector(&#39;#line&#39;)
+  line.setAttribute(&#39;d&#39;, `M${path_data.join(&#39; &#39;)}`)
+  let strokeLength = Math.ceil(line.getTotalLength())
+  document.querySelector(&#39;#chart&#39;).style.setProperty(&#39;--stroke-length&#39;, strokeLength)
+
+  document.querySelector(&#39;#chart&#39;).classList.add(&#39;animate&#39;)
+}
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2020/05/11/svg_line/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

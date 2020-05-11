@@ -1,0 +1,1316 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://pic29.photophoto.cn/20131204/0034034499213463_b.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >如何使用Nuxt.js入门</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <ul>
+<li>初学者模板或使用vue-cli安装它：</li>
+</ul>
+<pre><code>vue init nuxt/starter project-name
+</code></pre><ul>
+<li><p>如果vue-cli没有安装，请安装npm install -g vue-cli</p>
+</li>
+<li><p>然后安装依赖关系：</p>
+</li>
+</ul>
+<pre><code>$ cd &lt;project-name&gt;
+$ npm install 或者用 yarn install
+</code></pre><ul>
+<li>并通过以下方式启动项目</li>
+</ul>
+<pre><code>npm run dev
+</code></pre><ul>
+<li><p>该应用程序现在在http：// localhost：3000上运行</p>
+</li>
+<li><p>Nuxt.js将监听pages目录中的文件更改，因此在添加新页面时不需要重新启动应用程序。</p>
+</li>
+<li><p>目录结构介绍</p>
+<h3 id="资产目录"><a href="#资产目录" class="headerlink" title="资产目录"></a>资产目录</h3><ul>
+<li><p>该assets目录包含您未编译的资产，如Less，Sass或JavaScript</p>
+</li>
+<li><p>默认情况下，vue-loader会使用css-loader和Vue模板编译器自动处理样式和模板文件。在此编译过程中，所有资产的URL，例如<img src="...">，background: url(…)和CSS @import的解析为模块依赖关系。 </p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>如有下目录结构：</li>
+</ul>
+<pre><code>-| assets/
+----| image.png
+-| pages/
+----| index.vue
+</code></pre><ul>
+<li><p>你的CSS中，如果你使用url(‘~/assets/image.png’)，它会被翻译成require(‘~/assets/image.png’)。</p>
+</li>
+<li><p>或者如果在pages/index.vue你使用</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;img src=&quot;~/assets/image.png&quot;&gt;
+&lt;/template&gt;
+</code></pre><h3 id="静态的"><a href="#静态的" class="headerlink" title="静态的"></a>静态的</h3><ul>
+<li><p>如果您不想使用该assets目录中的webpacked Assets，则可以static在项目根目录中创建并使用该目录。</p>
+</li>
+<li><p>这些文件将由Nuxt自动提供，并可在您的项目根URL中访问。</p>
+</li>
+<li><p>此选项对于像文件有帮助robots.txt，sitemap.xml或CNAME（像GitHub的页面）。</p>
+</li>
+<li><p>从您的代码中，您可以使用/URL 来引用这些文件：</p>
+</li>
+</ul>
+<pre><code>&lt;!-- 这是来自Static目录中图片使用方法 image from static directory --&gt;
+&lt;img src=&quot;/my-image.png&quot;/&gt;
+
+&lt;!-- 这是来自assets目录中图片使用方法 webpacked image from assets directory --&gt;
+&lt;img src=&quot;~/assets/my-image-2.png&quot;/&gt;
+</code></pre><h3 id="组件目录"><a href="#组件目录" class="headerlink" title="组件目录"></a>组件目录</h3><ul>
+<li>该components目录包含您的Vue.js组件。Nuxt.js不会增加这些组件的数据方法</li>
+</ul>
+<h3 id="布局目录"><a href="#布局目录" class="headerlink" title="布局目录"></a>布局目录</h3><ul>
+<li>该layouts目录包含您的应用程序布局。该目录不能被重命名。视图部分描述了在Nuxt.js应用程序（文档，布局，页面和HTML头）中为特定路线配置数据和视图所需的全部内容。</li>
+</ul>
+<p><img src="https://nuxtjs.org/nuxt-views-schema.png" alt="图片"></p>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><ul>
+<li>要扩展HTML模板，请app.html在项目的根目录下创建。默认模板是：</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html {{ HTML_ATTRS }}&gt;
+  &lt;head&gt;
+    {{ HEAD }}
+  &lt;/head&gt;
+  &lt;body {{ BODY_ATTRS }}&gt;
+    {{ APP }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul>
+<li>一个例子是为IE添加条件CSS类html模板：</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 9]&gt;&lt;html lang=&quot;en-US&quot; class=&quot;lt-ie9 ie9&quot; {{ HTML_ATTRS }}&gt;&lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;html {{ HTML_ATTRS }}&gt;&lt;!--&lt;![endif]--&gt;
+  &lt;head&gt;
+    {{ HEAD }}
+  &lt;/head&gt;
+  &lt;body {{ BODY_ATTRS }}&gt;
+    {{ APP }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><ul>
+<li>Nuxt.js允许您扩展主布局或通过在layouts目录中添加它们来创建自定义布局。</li>
+</ul>
+<h3 id="默认布局"><a href="#默认布局" class="headerlink" title="默认布局"></a>默认布局</h3><ul>
+<li><p>您可以通过添加layouts/default.vue文件来扩展主布局。</p>
+</li>
+<li><p>确保<nuxt/>在创建布局以显示页面组件时添加组件。</p>
+</li>
+<li><p>默认的布局源代码是：</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;nuxt/&gt;
+&lt;/template&gt;
+</code></pre><h3 id="错误页面"><a href="#错误页面" class="headerlink" title="错误页面"></a>错误页面</h3><ul>
+<li><p>您可以通过添加layouts/error.vue文件来自定义错误页面。</p>
+</li>
+<li><p>这种布局是特殊的，因为你应该不包括<nuxt/>它的模板中。必须看到这布局发生错误时（一个组件显示404，500等）。</p>
+</li>
+<li><p>GitHub上提供了默认的错误页面源代码。</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+&lt;div class=&quot;__nuxt-error-page&quot;&gt;
+&lt;div class=&quot;error&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;90&quot; height=&quot;90&quot; fill=&quot;#DBE1EC&quot; viewBox=&quot;0 0 48 48&quot;&gt;&lt;path d=&quot;M22 30h4v4h-4zm0-16h4v12h-4zm1.99-10C12.94 4 4 12.95 4 24s8.94 20 19.99 20S44 35.05 44 24 35.04 4 23.99 4zM24 40c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16z&quot;/&gt;&lt;/svg&gt;
+
+  &lt;div class=&quot;title&quot;&gt;{{ message }}&lt;/div&gt;
+  &lt;p class=&quot;description&quot; v-if=&quot;statusCode === 404&quot;&gt;
+    &lt;nuxt-link class=&quot;error-link&quot; to=&quot;/&quot;&gt;&lt;%= messages.back_to_home %&gt;&lt;/nuxt-link&gt;
+  &lt;/p&gt;
+  &lt;% if(debug) { %&gt;
+  &lt;p class=&quot;description&quot; v-else&gt;&lt;%= messages.client_error_details %&gt;&lt;/p&gt;
+  &lt;% } %&gt;
+
+  &lt;div class=&quot;logo&quot;&gt;
+    &lt;a href=&quot;https://nuxtjs.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;%= messages.nuxtjs %&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &#39;nuxt-error&#39;,
+  props: [&#39;error&#39;],
+  head () {
+    return {
+      title: this.message,
+      meta: [
+        {
+          name: &#39;viewport&#39;,
+          content: &#39;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&#39;
+        }
+      ]
+    }
+  },
+  &lt;% if(debug) { %&gt;
+  // Only on debug mode
+  data () {
+    return {
+      mounted: false
+    }
+  },
+  mounted () {
+    this.mounted = true
+  },
+  created () {
+    console.error(this.error)
+  },
+  watch: {
+    error(newErr) {
+      if(newErr) {
+        console.error(newErr)
+      }
+    }
+  },
+  &lt;% } %&gt;
+  computed: {
+    statusCode () {
+      return (this.error &amp;&amp; this.error.statusCode) || 500
+    },
+    message () {
+      return this.error.message || &#39;&lt;%= messages.client_error %&gt;&#39;
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.__nuxt-error-page {
+  padding: 1rem;
+  background: #F7F8FB;
+  color: #47494E;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-weight: 100 !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.__nuxt-error-page .error {
+  max-width: 450px;
+}
+.__nuxt-error-page .title {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #47494E;
+  margin-bottom: 8px; 
+}
+.__nuxt-error-page .description {
+  color: #7F828B;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+.__nuxt-error-page a {
+  color: #7F828B !important;
+  text-decoration: none;
+}
+.__nuxt-error-page .logo {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+}
+&lt;/style&gt;
+</code></pre><ul>
+<li>自定义错误页面的示例layouts/error.vue：</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h1 v-if=&quot;error.statusCode === 404&quot;&gt;Page not found&lt;/h1&gt;
+    &lt;h1 v-else&gt;An error occurred&lt;/h1&gt;
+    &lt;nuxt-link to=&quot;/&quot;&gt;Home page&lt;/nuxt-link&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: [&#39;error&#39;],
+  layout: &#39;blog&#39; // you can set a custom layout for the error page
+}
+&lt;/script&gt;
+</code></pre><h3 id="自定义布局"><a href="#自定义布局" class="headerlink" title="自定义布局"></a>自定义布局</h3><ul>
+<li><p>目录中的每个文件（第一级）layouts都将创建一个可通过layout页面组件中的属性访问的自定义布局。</p>
+</li>
+<li><p>确保<nuxt/>在创建布局以显示页面组件时添加组件。</p>
+</li>
+<li><p>例子layouts/blog.vue：</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div&gt;My blog navigation bar here&lt;/div&gt;
+    &lt;nuxt/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre><ul>
+<li>然后pages/posts.vue，你可以告诉Nuxt.js使用你的自定义布局：</li>
+</ul>
+<pre><code>&lt;script&gt;
+export default {
+  layout: &#39;blog&#39;
+}
+&lt;/script&gt;
+</code></pre><h3 id="布局属性"><a href="#布局属性" class="headerlink" title="布局属性"></a>布局属性</h3><ul>
+<li>布局目录中的每个文件（第一层）都将创建一个可通过页面组件中的布局属性访问的自定义布局。</li>
+<li>类型： String或者Function（默认：’default’）</li>
+<li>使用layout页面组件中的键来定义要使用的布局：</li>
+</ul>
+<pre><code>export default {
+  layout: &#39;blog&#39;,
+  // OR
+  layout (context) {
+    return &#39;blog&#39;
+  }
+}
+</code></pre><h3 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h3><ul>
+<li>每个页面组件都是一个Vue组件，但是Nuxt.js添加了特殊键以尽可能简化通用应用程序的开发</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1 class=&quot;red&quot;&gt;Hello {{ name }}!&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  asyncData (context) {
+    // 每次加载组件之前调用
+    return { name: &#39;World&#39; }
+  },
+  fetch () {
+    // 用于在呈现页面之前填充数据中状态管理vuex中数据仓库store。它就像data方法，但它不设置组件数据。请参阅API页面fetch文档
+  },
+  head () {
+    // 为当前页面设置特定的标签&lt;meta&gt;
+  },
+  // and more functionality to discover
+  ...
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.red {
+  color: red;
+}
+&lt;/style&gt;
+</code></pre><h3 id="具体的页面方法api"><a href="#具体的页面方法api" class="headerlink" title="具体的页面方法api"></a>具体的页面方法api</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">asyncData</td>
+<td style="text-align:center">最重要的一个键, 支持 异步数据处理，另外该方法的第一个参数为当前页面组件的 上下文对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">fetch</td>
+<td style="text-align:center">与 asyncData 方法类似，用于在渲染页面之前获取数据填充应用的状态树（store）。不同的是 fetch 方法不会设置组件的数据。详情请参考 关于fetch方法的文档。</td>
+</tr>
+<tr>
+<td style="text-align:center">head</td>
+<td style="text-align:center">配置当前页面的 Meta 标签, 详情参考 页面头部配置API。</td>
+</tr>
+<tr>
+<td style="text-align:center">layout</td>
+<td style="text-align:center">指定当前页面使用的布局（layouts 根目录下的布局文件）。详情请参考 关于 布局 的文档。</td>
+</tr>
+<tr>
+<td style="text-align:center">transition</td>
+<td style="text-align:center">指定页面切换的过渡动效, 详情请参考 页面过渡动效。</td>
+</tr>
+<tr>
+<td style="text-align:center">scrollToTop</td>
+<td style="text-align:center">布尔值，默认: false。 用于判定渲染页面前是否需要将当前页面滚动至顶部。这个配置用于 嵌套路由的应用场景。</td>
+</tr>
+<tr>
+<td style="text-align:center">validate</td>
+<td style="text-align:center">校验方法用于校验 动态路由的参数。</td>
+</tr>
+<tr>
+<td style="text-align:center">middleware</td>
+<td style="text-align:center">指定页面的中间件，中间件会在页面渲染之前被调用， 请参考 路由中间件。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="异步数据"><a href="#异步数据" class="headerlink" title="异步数据"></a>异步数据</h3><ul>
+<li><p>Nuxt.js 扩展了 Vue.js，增加了一个叫 asyncData 的方法，使得我们可以在设置组件的数据之前能异步获取或处理数据。</p>
+</li>
+<li><p>asyncData 方法</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>asyncData方法会在组件（限于页面组件）每次加载之前被调用。它可以在服务端或路由更新之前被调用。 在这个方法被调用的时候，第一个参数被设定为当前页面的上下文对象，你可以利用 asyncData方法来获取数据，Nuxt.js 会将 asyncData 返回的数据融合组件 data 方法返回的数据一并返回给当前组件。</li>
+</ul>
+<ul>
+<li><p><p style="color:#fff;background-color:red;">注意：由于asyncData方法是在组件 初始化 前被调用的，所以在方法内是没有办法通过 this 来引用组件的实例对象</p>。</p>
+</li>
+<li><p>Nuxt.js 提供了几种不同的方法来使用 asyncData 方法，你可以选择自己熟悉的一种来用：</p>
+</li>
+</ul>
+<blockquote>
+<p>1.返回一个 Promise, nuxt.js会等待该Promise被解析之后才会设置组件的数据，从而渲染组件.<br>2.使用 async 或 await<br>3.为第二个参数指定一个回调函数. 注：该回调函数需符合通用的 NodeJs 回调函数的形式: callback(err, data)</p>
+</blockquote>
+<ul>
+<li>返回 Promise</li>
+</ul>
+<pre><code>export default {
+  asyncData ({ params }) {
+    return axios.get(`https://my-api/posts/${params.id}`)
+    .then((res) =&gt; {
+      return { title: res.data.title }
+    })
+  }
+}
+</code></pre><ul>
+<li>使用 async或await</li>
+</ul>
+<pre><code>export default {
+  async asyncData ({ params }) {
+    let { data } = await axios.get(`https://my-api/posts/${params.id}`)
+    return { title: data.title }
+  }
+}
+</code></pre><ul>
+<li>使用 回调函数</li>
+</ul>
+<pre><code>export default {
+  asyncData ({ params }, callback) {
+    axios.get(`https://my-api/posts/${params.id}`)
+    .then((res) =&gt; {
+      callback(null, { title: res.data.title })
+    })
+  }
+}
+</code></pre><ul>
+<li>返回 对象</li>
+<li>如果组件的数据不需要异步获取或处理，可以直接返回指定的字面对象作为组件的数据</li>
+</ul>
+<pre><code>export default {
+  data () {
+    return { foo: &#39;bar&#39; }
+  }
+}
+</code></pre><h1 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h1><ul>
+<li>Nuxt.js 在上下文对象context中提供了一个 error(params) 方法，你可以通过调用该方法来显示错误信息页面。params.statusCode 可用于指定服务端返回的请求状态码。</li>
+</ul>
+<pre><code>export default {
+  asyncData ({ params, error }) {
+    return axios.get(`https://my-api/posts/${params.id}`)
+    .then((res) =&gt; {
+      return { title: res.data.title }
+    })
+    .catch((e) =&gt; {
+      error({ statusCode: 404, message: &#39;Post not found&#39; })
+    })
+  }
+}
+</code></pre><ul>
+<li>如果你使用 回调函数 的方式, 你可以将错误的信息对象直接传给该回调函数， Nuxt.js 内部会自动调用 error 方法：</li>
+</ul>
+<pre><code>export default {
+  asyncData ({ params }, callback) {
+    axios.get(`https://my-api/posts/${params.id}`)
+    .then((res) =&gt; {
+      callback(null, { title: res.data.title })
+    })
+    .catch((e) =&gt; {
+      callback({ statusCode: 404, message: &#39;Post not found&#39; })
+    })
+  }
+}
+</code></pre><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><ul>
+<li>Nuxt.js允许您在实例化根vue.js应用程序之前定义要运行的JavaScript插件。这在使用自己的库或外部模块时特别有用。</li>
+</ul>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><blockquote>
+<p>知道在任何Vue 实例生命周期中.<br>仅从客户端和服务器端调用钩子<br>beforeCreate和created钩子是非常重要的。<br>所有其他的钩子只能从客户端调用。</p>
+</blockquote>
+<h3 id="使用第三方模块"><a href="#使用第三方模块" class="headerlink" title="使用第三方模块"></a>使用第三方模块</h3><ul>
+<li><p>我们可以在应用中使用第三方模块，一个典型的例子是在客户端和服务端使用 axios 做 HTTP 请求。</p>
+</li>
+<li><p>首先我们需要安装 npm 包：</p>
+</li>
+</ul>
+<pre><code>npm install --save axios
+</code></pre><ul>
+<li>然后在页面内可以这样使用：</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from &#39;axios&#39;
+
+export default {
+  async asyncData ({ params }) {
+    let { data } = await axios.get(`https://my-api/posts/${params.id}`)
+    return { title: data.title }
+  }
+}
+&lt;/script&gt;
+</code></pre><ul>
+<li>有一个值得注意的问题是，如果我们在另外一个页面内也引用了 axios，那么在应用打包发布的时候 axios 会被打包两次，而实际上我们只需要打包一次。这个问题可以通过在 nuxt.config.js 里面配置 build.vendor 来解决：</li>
+</ul>
+<pre><code>module.exports = {
+  build: {
+    vendor: [&#39;axios&#39;]
+  }
+}
+</code></pre><ul>
+<li>经过上面的配置后，我们可以在任何页面里面引入 axios 而不用担心它会被重复打包。</li>
+</ul>
+<h3 id="使用-Vue-插件"><a href="#使用-Vue-插件" class="headerlink" title="使用 Vue 插件"></a>使用 Vue 插件</h3><ul>
+<li><p>假如我们想使用 vue-notifications 显示应用的通知信息，我们需要在程序运行前配置好这个插件。</p>
+</li>
+<li><p>首先增加文件 plugins/vue-notifications.js：</p>
+</li>
+</ul>
+<pre><code>import Vue from &#39;vue&#39;
+import VueNotifications from &#39;vue-notifications&#39;
+
+Vue.use(VueNotifications)
+</code></pre><ul>
+<li>然后, 在 nuxt.config.js 内配置 plugins 如下：</li>
+</ul>
+<pre><code>module.exports = {
+  plugins: [&#39;~/plugins/vue-notifications&#39;]
+}
+</code></pre><ul>
+<li><p>实际上， vue-notifications 会被打包至应用的脚本代码里， 但是它属于第三方库，我们理应将它打包至库文件里以获得更好的缓存效果。（译者注：应用代码比库文件修改频繁，应尽量将第三方库打包至单独的文件中去）。</p>
+</li>
+<li><p>我们可以更新 nuxt.config.js 文件，在 vendor 构建配置项里添加 vue-notifications：</p>
+</li>
+</ul>
+<pre><code>module.exports = {
+  build: {
+    vendor: [&#39;~/plugins/vue-notifications&#39;]
+  },
+  plugins: [&#39;~/plugins/vue-notifications&#39;]
+}
+</code></pre><ul>
+<li>只在浏览器里使用的插件</li>
+</ul>
+<hr>
+<ul>
+<li><p>有些插件可能只是在浏览器里使用，所以你可以用 ssr: false 变量来配置插件只从客户端还是服务端运行。</p>
+</li>
+<li><p>举个例子：</p>
+</li>
+<li><p>nuxt.config.js:</p>
+</li>
+</ul>
+<pre><code>module.exports = {
+  plugins: [
+    { src: &#39;~/plugins/vue-notifications&#39;, ssr: false }
+  ]
+}
+</code></pre><ul>
+<li>plugins/vue-notifications.js:</li>
+</ul>
+<pre><code>import Vue from &#39;vue&#39;
+import VueNotifications from &#39;vue-notifications&#39;
+
+Vue.use(VueNotifications)
+</code></pre><ul>
+<li>同样地，如果有些脚本库你只想在服务端使用，在 Webpack 打包 server.bundle.js 文件的时候会将 process.server 变量设置成 true。</li>
+</ul>
+<h3 id="Vuex-状态树"><a href="#Vuex-状态树" class="headerlink" title="Vuex 状态树"></a>Vuex 状态树</h3><ul>
+<li>对于每个大项目来说，使用状态树 (store) 管理状态 (state) 十分有必要。这就是为什么 Nuxt.js 内核实现了 Vuex。</li>
+</ul>
+<h3 id="使用状态树"><a href="#使用状态树" class="headerlink" title="使用状态树"></a>使用状态树</h3><ul>
+<li>Nuxt.js 会尝试找到应用根目录下的 store 目录，如果该目录存在，它将做以下的事情：</li>
+</ul>
+<blockquote>
+<p>1.引用 vuex 模块<br>2.将 vuex 模块 加到 vendors 构建配置中去<br>3.设置 Vue 根实例的 store 配置项<br>4.Nuxt.js 支持两种使用 store 的方式，你可以择一使用：</p>
+</blockquote>
+<p><strong> 普通方式：</strong>  store/index.js 返回一个 Vuex.Store 实例<br><strong> 模块方式：</strong> store 目录下的每个 .js 文件会被转换成为状态树指定命名的子模块 （当然，index 是根模块）</p>
+<h3 id="普通方式"><a href="#普通方式" class="headerlink" title="普通方式"></a>普通方式</h3><ul>
+<li>使用普通方式的状态树，需要添加 store/index.js 文件，并对外暴露一个 Vuex.Store 实例：</li>
+</ul>
+<pre><code>import Vue from &#39;vue&#39;
+import Vuex from &#39;vuex&#39;
+
+Vue.use(Vuex)
+
+const store = () =&gt; new Vuex.Store({
+
+  state: {
+    counter: 0
+  },
+  mutations: {
+    increment (state) {
+      state.counter++
+    }
+  }
+})
+
+export default store
+</code></pre><ul>
+<li><p>Nuxt.js 内置引用了 vuex 模块，所以不需要额外安装。</p>
+</li>
+<li><p>现在我们可以在组件里面通过 this.$store 来使用状态树：</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;button @click=&quot;$store.commit(&#39;increment&#39;)&quot;&gt;{{ $store.state.counter }}&lt;/button&gt;
+&lt;/template&gt;
+</code></pre><h3 id="模块方式"><a href="#模块方式" class="headerlink" title="模块方式"></a>模块方式</h3><ul>
+<li><p>状态树还可以拆分成为模块，store 目录下的每个 .js 文件会被转换成为状态树指定命名的子模块</p>
+</li>
+<li><p>使用状态树模块化的方式，store/index.js 不需要返回 Vuex.Store 实例，而应该直接将 state、mutations 和 actions 暴露出来：</p>
+</li>
+</ul>
+<pre><code>export const state = () =&gt; ({
+  counter: 0
+})
+
+export const mutations = {
+  increment (state) {
+    state.counter++
+  }
+}
+</code></pre><ul>
+<li>其他的模块文件也需要采用类似的方式，如 store/todos.js 文件：</li>
+</ul>
+<pre><code>export const state = () =&gt; ({
+  list: []
+})
+
+export const mutations = {
+  add (state, text) {
+    state.list.push({
+      text: text,
+      done: false
+    })
+  },
+  remove (state, { todo }) {
+    state.list.splice(state.list.indexOf(todo), 1)
+  },
+  toggle (state, todo) {
+    todo.done = !todo.done
+  }
+}
+</code></pre><ul>
+<li>最终的状态树大概如下：</li>
+</ul>
+<pre><code>new Vuex.Store({
+  state: { counter: 0 },
+  mutations: {
+    increment (state) {
+      state.counter++
+    }
+  },
+  modules: {
+    todos: {
+      state: {
+        list: []
+      },
+      mutations: {
+        add (state, { text }) {
+          state.list.push({
+            text,
+            done: false
+          })
+        },
+        remove (state, { todo }) {
+          state.list.splice(state.list.indexOf(todo), 1)
+        },
+        toggle (state, { todo }) {
+          todo.done = !todo.done
+        }
+      }
+    }
+  }
+})
+</code></pre><ul>
+<li>在页面组件 pages/todos.vue， 可以像下面这样使用 todos 模块：</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;ul&gt;
+    &lt;li v-for=&quot;todo in todos&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; :checked=&quot;todo.done&quot; @change=&quot;toggle(todo)&quot;&gt;
+      &lt;span :class=&quot;{ done: todo.done }&quot;&gt;{{ todo.text }}&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;input placeholder=&quot;What needs to be done?&quot; @keyup.enter=&quot;addTodo&quot;&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import { mapMutations } from &#39;vuex&#39;
+
+export default {
+  computed: {
+    todos () { return this.$store.state.todos.list }
+  },
+  methods: {
+    addTodo (e) {
+      this.$store.commit(&#39;todos/add&#39;, e.target.value)
+      e.target.value = &#39;&#39;
+    },
+    ...mapMutations({
+      toggle: &#39;todos/toggle&#39;
+    })
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.done {
+  text-decoration: line-through;
+}
+&lt;/style&gt;
+</code></pre><ul>
+<li><P style='color:#fff;background-color:#35495e;padding:20px'>你也可以在模块文件里返回Vuex.Store实例,但是这种情况下你需要手工设置应用的状态树</p></li>
+</ul>
+<h3 id="fetch方法"><a href="#fetch方法" class="headerlink" title="fetch方法"></a>fetch方法</h3><ul>
+<li>fetch方法会在渲染页面前被调用，作用是填充状态树 (store) 数据，与 asyncData 方法类似，不同的是它不会设置组件的数据。</li>
+</ul>
+<h3 id="nuxtServerInit方法"><a href="#nuxtServerInit方法" class="headerlink" title="nuxtServerInit方法"></a>nuxtServerInit方法</h3><ul>
+<li><p>如果在状态树中指定了 nuxtServerInit 方法，Nuxt.js 调用它的时候会将页面的上下文对象作为第2个参数传给它（服务端调用时才会酱紫哟）。当我们想将服务端的一些数据传到客户端时，这个方法是非常好用的。</p>
+</li>
+<li><p>举个例子，假设我们服务端的会话状态树里可以通过req.session.user 来访问当前登录的用户。将该登录用户信息传给客户端的状态树，我们只需更新 store/index.js 如下</p>
+</li>
+</ul>
+<pre><code>actions: {
+  nuxtServerInit ({ commit }, { req }) {
+    if (req.session.user) {
+      commit(&#39;user&#39;, req.session.user)
+    }
+  }
+}
+</code></pre><ul>
+<li><p>如果你使用状态树模块化的模式，只有主模块（即 store/index.js）适用设置该方法（其他模块设置了也不会被调用）。</p>
+</li>
+<li><p>nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 context.redirect() 和 context.error()。</p>
+</li>
+</ul>
+<h3 id="命令列表"><a href="#命令列表" class="headerlink" title="命令列表"></a>命令列表</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">nuxt</td>
+<td style="text-align:center">启动一个热加载的Web服务器（开发模式） localhost:3000。</td>
+</tr>
+<tr>
+<td style="text-align:center">nuxt build</td>
+<td style="text-align:center">利用webpack编译应用，压缩JS和CSS资源（发布用）。</td>
+</tr>
+<tr>
+<td style="text-align:center">nuxt start</td>
+<td style="text-align:center">以生成模式启动一个Web服务器 (nuxt build 会先被执行)。</td>
+</tr>
+<tr>
+<td style="text-align:center">nuxt generate</td>
+<td style="text-align:center">编译应用，并依据路由配置生成对应的HTML文件 (用于静态站点的部署)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>你可以将这些命令添加至 package.json：</li>
+</ul>
+<pre><code>&quot;scripts&quot;: {
+  &quot;dev&quot;: &quot;nuxt&quot;,
+  &quot;build&quot;: &quot;nuxt build&quot;,
+  &quot;start&quot;: &quot;nuxt start&quot;,
+  &quot;generate&quot;: &quot;nuxt generate&quot;
+}
+</code></pre><ul>
+<li>这样你可以通过 npm run <command> 来执行相应的命令。如: npm run dev。</li>
+</ul>
+<h3 id="发布部署"><a href="#发布部署" class="headerlink" title="发布部署"></a>发布部署</h3><ul>
+<li>Nuxt.js 提供了两种发布部署应用的方式：服务端渲染应用部署 和 静态应用部署</li>
+</ul>
+<h3 id="服务端渲染应用部署"><a href="#服务端渲染应用部署" class="headerlink" title="服务端渲染应用部署"></a>服务端渲染应用部署</h3><ul>
+<li>部署 Nuxt.js 服务端渲染的应用不能直接使用 nuxt 命令，而应该先进行编译构建，然后再启动 Nuxt 服务，可通过以下两个命令来完成：</li>
+</ul>
+<pre><code>nuxt build
+nuxt start
+</code></pre><ul>
+<li>推荐的 package.json 配置如下：</li>
+</ul>
+<pre><code>{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;dependencies&quot;: {
+    &quot;nuxt&quot;: &quot;latest&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;nuxt&quot;,
+    &quot;build&quot;: &quot;nuxt build&quot;,
+    &quot;start&quot;: &quot;nuxt start&quot;
+  }
+}
+</code></pre><h3 id="静态应用部署"><a href="#静态应用部署" class="headerlink" title="静态应用部署"></a>静态应用部署</h3><ul>
+<li><p>Nuxt.js 可依据路由配置将应用静态化，使得我们可以将应用部署至任何一个静态站点主机服务商。</p>
+</li>
+<li><p>可利用下面的命令生成应用的静态目录和文件：</p>
+</li>
+</ul>
+<pre><code>npm run generate
+</code></pre><ul>
+<li><p>这个命令会创建一个 dist 文件夹，所有静态化后的资源文件均在其中。</p>
+</li>
+<li><p>如果你的项目需要用到动态路由，请移步 generate配置API 了解如何让 Nuxt.js 生成此类动态路由的静态文件。</p>
+</li>
+<li><p><P style="color:#fff;background-color:#35495e;padding:20px;">注意：使用 nuxt generate 静态化应用的时候, 传给 asyncData() 和 fetch() 方法的上下文对象 不会包含 req 和 res 两个属性。</p></p>
+</li>
+</ul>
+<h3 id="API学习应用"><a href="#API学习应用" class="headerlink" title="API学习应用"></a>API学习应用</h3><h3 id="1-asyncData-方法"><a href="#1-asyncData-方法" class="headerlink" title="1.asyncData 方法"></a>1.asyncData 方法</h3><blockquote>
+<p>你可能想要在服务器端获取并渲染数据。Nuxt.js添加了asyncData方法使得你能够在渲染组件之前异步获取数据。<br>类型： Function<br>asyncData方法会在组件（限于页面组件）每次加载之前被调用。它可以在服务端或路由更新之前被调用。在这个方法被调用的时候，第一个参数被设定为当前页面的上下文对象，你可以利用 asyncData方法来获取数据并返回给当前组件</p>
+</blockquote>
+<pre><code>export default {
+  data () {
+    return { project: &#39;default&#39; }
+  },
+  asyncData (context) {
+    return { project: &#39;nuxt&#39; }
+  }
+}
+</code></pre><p><p style="color:#fff;background-color:#e67e22;padding:20px">注意：由于asyncData方法是在组件 初始化 前被调用的，所以在方法内是没有办法通过 this 来引用组件的实例对象。</P></p>
+<h3 id="上下文对象"><a href="#上下文对象" class="headerlink" title="上下文对象"></a>上下文对象</h3><ul>
+<li>context 变量的可用属性一览：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">可用</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">app</td>
+<td style="text-align:center">根Vue实例</td>
+<td style="text-align:center">客户端服务器</td>
+<td style="text-align:center">包含所有插件的根Vue实例。例如，使用时axios，您可以访问$axios通过context.app.$axios。</td>
+</tr>
+<tr>
+<td style="text-align:center">isClient</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">是否来自客户端渲染</td>
+</tr>
+<tr>
+<td style="text-align:center">isServer</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">是否来自服务端渲染</td>
+</tr>
+<tr>
+<td style="text-align:center">isDev</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">是否是开发(dev) 模式，在生产环境的数据缓存中用到</td>
+</tr>
+<tr>
+<td style="text-align:center">route</td>
+<td style="text-align:center">vue-router 路由</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">vue-router 路由实例。</td>
+</tr>
+<tr>
+<td style="text-align:center">store</td>
+<td style="text-align:center">vuex 数据流</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">Vuex.Store 实例。只有vuex 数据流存在相关配置时可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">env</td>
+<td style="text-align:center">Object</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">nuxt.config.js 中配置的环境变量, 见 环境变量 api</td>
+</tr>
+<tr>
+<td style="text-align:center">params</td>
+<td style="text-align:center">Object</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">route.params 的别名</td>
+</tr>
+<tr>
+<td style="text-align:center">query</td>
+<td style="text-align:center">Object</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">route.query 的别名</td>
+</tr>
+<tr>
+<td style="text-align:center">req</td>
+<td style="text-align:center">http.Request</td>
+<td style="text-align:center">服务端</td>
+<td style="text-align:center">Node.js API 的 Request 对象。如果 nuxt 以中间件形式使用的话，这个对象就根据你所使用的框架而定。nuxt generate 不可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">res</td>
+<td style="text-align:center">http.Response</td>
+<td style="text-align:center">服务端</td>
+<td style="text-align:center">Node.js API 的 Response 对象。如果 nuxt 以中间件形式使用的话，这个对象就根据你所使用的框架而定。nuxt generate 不可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">redirect</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">用这个方法重定向用户请求到另一个路由。状态码在服务端被使用，默认 302。redirect([status,] path [, query])</td>
+</tr>
+<tr>
+<td style="text-align:center">error</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">客户端 &amp; 服务端</td>
+<td style="text-align:center">用这个方法展示错误页：error(params)。params 参数应该包含 statusCode 和 message 字段。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fetch-方法"><a href="#fetch-方法" class="headerlink" title="fetch 方法"></a>fetch 方法</h3><ul>
+<li>fetch 方法用于在渲染页面前填充应用的状态树（store）数据， 与 asyncData 方法类似，不同的是它不会设置组件的数据</li>
+<li>类型： Function</li>
+<li><p>如果页面组件设置了 fetch 方法，它会在组件每次加载前被调用（在服务端或切换至目标路由之前）。</p>
+</li>
+<li><p>fetch 方法的第一个参数是页面组件的上下文对象 context，我们可以用 fetch 方法来获取数据填充应用的状态树。为了让获取过程可以异步，你需要返回一个 Promise，Nuxt.js 会等这个 promise 完成后再渲染组件。</p>
+</li>
+<li><p>例如 pages/index.vue：</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;Stars: {{ $store.state.stars }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  fetch ({ store, params }) {
+    return axios.get(&#39;http://my-api/stars&#39;)
+    .then((res) =&gt; {
+      store.commit(&#39;setStars&#39;, res.data)
+    })
+  }
+}
+&lt;/script&gt;
+</code></pre><ul>
+<li>你也可以使用 async 或 await 的模式简化代码如下：</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;Stars: {{ $store.state.stars }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  async fetch ({ store, params }) {
+    let { data } = await axios.get(&#39;http://my-api/stars&#39;)
+    store.commit(&#39;setStars&#39;, data)
+  }
+}
+&lt;/script&gt;
+</code></pre><h3 id="head-方法"><a href="#head-方法" class="headerlink" title="head 方法"></a>head 方法</h3><ul>
+<li>Nuxt.js 使用了 vue-meta 更新应用的 头部标签(Head) 和 html 属性</li>
+<li>类型： Object 或 Function</li>
+<li><p>使用 head 方法设置当前页面的头部标签。</p>
+</li>
+<li><p>在 head 方法里可通过 this 关键字来获取组件的数据，你可以利用页面组件的数据来设置个性化的 meta 标签</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data () {
+    return {
+      title: &#39;Hello World!&#39;
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: &#39;description&#39;, name: &#39;description&#39;, content: &#39;My custom description&#39; }
+      ]
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre><ul>
+<li><p style="color:#fff;background-color:#e67e22;padding:20px">注意：为了避免子组件中的meta标签不能正确覆盖父组件中相同的标签而产生重复的现象，建议利用 hid 键为meta标签配一个唯一的标识编号。请阅读关于 vue-meta 的更多信息</P></li>
+</ul>
+<h3 id="layout-属性"><a href="#layout-属性" class="headerlink" title="layout 属性"></a>layout 属性</h3><ul>
+<li><p>layouts 根目录下的所有文件都属于个性化布局文件，可以在页面组件中利用 layout 属性来引用。</p>
+</li>
+<li><p>类型： String 或 Function (默认值： ‘default’)</p>
+</li>
+<li>使用 layout 属性来为页面指定使用哪一个布局文件：在上面的例子中,Nuxt.js 会使用 layouts/blog.vue 作为当前页面组件的布局文件。</li>
+</ul>
+<pre><code>export default {
+  layout: &#39;blog&#39;,
+  // 或
+  layout (context) {
+    return &#39;blog&#39;
+  }
+}
+</code></pre><h3 id="middleware-属性"><a href="#middleware-属性" class="headerlink" title="middleware 属性"></a>middleware 属性</h3><ul>
+<li><p>中间件属性</p>
+<blockquote>
+<p>类型：String或Array<br>项目： String<br>为应用程序的特定页面设置中间件。</p>
+</blockquote>
+</li>
+<li><p>例：pages/secret.vue：</p>
+</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;Secret page&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  middleware: &#39;authenticated&#39;
+}
+&lt;/script&gt;
+</code></pre><ul>
+<li>middleware/authenticated.js：</li>
+</ul>
+<pre><code>export default function ({ store, redirect }) {
+  // If the user is not authenticated
+  if (!store.state.authenticated) {
+    return redirect(&#39;/login&#39;)
+  }
+}
+</code></pre><h3 id="scrollToTop属性"><a href="#scrollToTop属性" class="headerlink" title="scrollToTop属性"></a>scrollToTop属性</h3><ul>
+<li><p>使用scrollToTop属性可以告诉nuxt.js在呈现页面之前滚动到顶部。</p>
+</li>
+<li><p>类型： Boolean（默认：false）</p>
+</li>
+<li>默认情况下，当你转到另一个页面时，Nuxt.js会滚动到顶部，但是对于子路径，Nuxt.js将保持滚动位置。如果你想告诉Nuxt.js在渲染子路径时滚动到顶部，请设置scrollToTop: true：</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;My child component&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  scrollToTop: true
+}
+&lt;/script&gt;
+</code></pre><h3 id="transition-属性"><a href="#transition-属性" class="headerlink" title="transition 属性"></a>transition 属性</h3><ul>
+<li><p>Nuxt.js 使用 Vue.js 的<transition>组件来实现路由切换时的过渡动效。</p>
+</li>
+<li><p>类型： String 或 Object 或 Function</p>
+</li>
+<li>如果想给某个页面自定义过渡特效的话，只要在该页面组件中配置 transition 字段即可：</li>
+</ul>
+<pre><code>export default {
+  // 可以是字符
+  transition: &#39;&#39;
+  // 或对象
+  transition: {}
+  // 或函数
+  transition (to, from) {}
+}
+</code></pre><h3 id="String-字符"><a href="#String-字符" class="headerlink" title="String 字符"></a>String 字符</h3><ul>
+<li>如果 transition 属性的值类型是字符类型， 相当于设置了动效配置对象的 name 属性：transition.name。</li>
+</ul>
+<pre><code>export default {
+  transition: &#39;test&#39;
+}
+</code></pre><ul>
+<li>Nuxt.js 将使用上面的配置来设置 Vue.js transition 组件，如下：</li>
+</ul>
+<pre><code>&lt;transition name=&quot;test&quot;&gt;
+</code></pre><h3 id="Object对象"><a href="#Object对象" class="headerlink" title="Object对象"></a>Object对象</h3><ul>
+<li>如果 transition 属性的值类型是对象类型：</li>
+</ul>
+<pre><code>export default {
+  transition: {
+    name: &#39;test&#39;,
+    mode: &#39;out-in&#39;
+  }
+}
+</code></pre><ul>
+<li>Nuxt.js 将使用上面的配置来设置 Vue.js transition 组件，如下：</li>
+</ul>
+<pre><code>&lt;transition name=&quot;test&quot; mode=&quot;out-in&quot;&gt;
+</code></pre><ul>
+<li>transition 允许配置的字段介绍：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">默认值</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">“page”</td>
+<td style="text-align:center">所有路由过渡都会用到的过渡名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">mode</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">“out-in”</td>
+<td style="text-align:center">所有路由都用到的过渡模式，见 Vue.js transition 使用文档。</td>
+</tr>
+<tr>
+<td style="text-align:center">css</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">是否给页面组件根元素添加 CSS 过渡类名。如果值为false，路由过渡时将触发页面组件事件注册的 Javascript 钩子方法。</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">指定过滤动效事件的类型，用于判断过渡结束的时间点。值可以是 “transition” 或 “animation”。 默认情况下, Nuxt.js 会自动侦测动效事件的类型。</td>
+</tr>
+<tr>
+<td style="text-align:center">enterClass</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">目标路由动效开始时的类名。 详情请参考 Vue.js transition 使用文档 。</td>
+</tr>
+<tr>
+<td style="text-align:center">enterToClass</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">目标路由动效结束时的类名。 详情请参考 Vue.js transition 使用文档 。</td>
+</tr>
+<tr>
+<td style="text-align:center">enterActiveClass</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">目标路由过渡过程中的类名。详情请参考 Vue.js transition 使用文档</td>
+</tr>
+<tr>
+<td style="text-align:center">leaveClass</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">当前路由动效开始时的类名。 详情请参考 Vue.js transition 使用文档 。</td>
+</tr>
+<tr>
+<td style="text-align:center">leaveToClass</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">当前路由动效结束时的类名。 详情请参考 Vue.js transition 使用文档 。</td>
+</tr>
+<tr>
+<td style="text-align:center">leaveActiveClass</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">当前路由动效过程中的类名。详情请参考 Vue.js transition 使用文档</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validate-方法"><a href="#validate-方法" class="headerlink" title="validate 方法"></a>validate 方法</h3><ul>
+<li>Nuxt.js 可以让你在动态路由对应的页面组件中配置一个校验方法用于校验动态路由参数的有效性。</li>
+<li>类型： Function</li>
+</ul>
+<pre><code>validate({ params, query }) {
+  return true // 如果参数有效
+  return false // 参数无效，Nuxt.js 停止渲染当前页面并显示错误页面
+}
+</code></pre><ul>
+<li>Nuxt.js 可以让你在动态路由对应的页面组件（本例为： pages/users/_id.vue）中配置一个校验方法</li>
+<li>如果校验方法返回的值不为 true， Nuxt.js 将自动加载显示 404 错误页面</li>
+</ul>
+<pre><code>export default {
+  validate ({ params }) {
+    // Must be a number
+    return /^\d+$/.test(params.id)
+  }
+}
+</code></pre><ul>
+<li><p>你也可以在validate 方法中校验 store 的数据 (如果 store 此前在 nuxtServerInit 方法 中被设置了的话):</p>
+</li>
+<li><p>你也可以在validate 方法中校验 store 的数据 (如果 store 此前在 nuxtServerInit 方法 中被设置了的话):</p>
+<pre><code>export default {
+validate ({ params, store }) {
+  // 校验 `params.id` 是否存在
+  return store.state.categories.some((category) =&gt; category.id === params.id)
+}
+}
+</code></pre></li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/03/02/nuxt/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

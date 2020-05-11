@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://a0.att.hudong.com/56/12/01300000164151121576126282411.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >很棒的Webpack插件</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="提高工作效率的很棒的Webpack插件"><a href="#提高工作效率的很棒的Webpack插件" class="headerlink" title="提高工作效率的很棒的Webpack插件"></a>提高工作效率的很棒的Webpack插件</h1><h3 id="1、Webpack-Bundle-Analyzer"><a href="#1、Webpack-Bundle-Analyzer" class="headerlink" title="1、Webpack Bundle Analyzer"></a>1、Webpack Bundle Analyzer</h3><p>通过交互式的、可缩放的树状图来可视化webpack输出文件的大小。<br>该插件将帮助你您执行以下操作：</p>
+<ul>
+<li>了解你的包里真正有什么</li>
+<li>找出哪些模块构成了捆绑软件的最大组成部分</li>
+<li>查找错误到达的模块</li>
+<li>优化你的Webpack捆绑包<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code># NPM
+npm install --save-dev webpack-bundle-analyzer
+# Yarn
+yarn add -D webpack-bundle-analyzer
+</code></pre><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><pre><code>const BundleAnalyzerPlugin = require(&#39;webpack-bundle analyzer&#39;);
+module.exports = {
+plugins: [
+  new BundleAnalyzerPlugin()
+]
+}
+</code></pre><h3 id="2、offline-plugin"><a href="#2、offline-plugin" class="headerlink" title="2、offline-plugin"></a>2、offline-plugin</h3>offline-plugin 旨在为webpack项目提供离线体验。</li>
+</ul>
+<p>该插件使用 ServiceWorker 和 AppCache 作为后台引擎。只需将这个插件包含在 webpack.config 中，并将随附的运行时包含在客户端脚本中，通过缓存所有（或一些）webpack输出资产，你的项目将变为离线状态。</p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><pre><code>npm install offline-plugin [--save-dev]
+</code></pre><h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>首先，在您的webpack.config中实例化插件：</p>
+<pre><code>// webpack.config.js example
+var OfflinePlugin = require(&#39;offline-plugin&#39;);
+module.exports = {
+  // ...
+  plugins: [
+    // ... other plugins
+    // 如果OfflinePlugin是最后添加的插件，那就更好了
+    new OfflinePlugin()
+  ]
+  // ...
+}
+</code></pre><p>并且，您可以选择使用选项进行配置。然后，将运行时间添加到entry文件（通常是entry目）中：</p>
+<pre><code>require(&#39;offline-plugin/runtime&#39;).install();
+</code></pre><h4 id="ES6-Babel-TypeScript"><a href="#ES6-Babel-TypeScript" class="headerlink" title="ES6/Babel/TypeScript"></a>ES6/Babel/TypeScript</h4><pre><code>import * as OfflinePluginRuntime from &#39;offline-plugin/runtime&#39;;
+OfflinePluginRuntime.install();
+</code></pre><p>有关 TypeScript 用法的更多详细信息，请参见此处。</p>
+<h3 id="3、webpack-pwa-manifest"><a href="#3、webpack-pwa-manifest" class="headerlink" title="3、webpack-pwa-manifest"></a>3、webpack-pwa-manifest</h3><p>webpack-pwa-manifest 将自己描述为“用于Webpack的渐进式Web App清单生成器，具有自动图标大小调整和指纹识别支持。”</p>
+<p>webpack-pwa-manifest 是一个webpack插件，可为您的渐进式Web应用程序生成 manifest.json。</p>
+<p>如果您在配置上使用注入，请确保 HtmlWebpackPlugin 出现在plugins 数组中的 WebpackPwaManifest 之前。</p>
+<h4 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h4><ul>
+<li>自动图标大小调整</li>
+<li>图标指纹</li>
+<li>清单指纹</li>
+<li>HTML上的自动清单注入</li>
+<li>热重载支持<h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><pre><code>npm install --save-dev webpack-pwa-manifest
+</code></pre><h3 id="使用-2"><a href="#使用-2" class="headerlink" title="使用"></a>使用</h3></li>
+</ul>
+<p>在你的 webpack.config.js 中：</p>
+<pre><code>import WebpackPwaManifest from &#39;webpack-pwa-manifest&#39;
+...
+plugins: [
+  new WebpackPwaManifest({
+    name: &#39;My Progressive Web App&#39;,
+    short_name: &#39;MyPWA&#39;,
+    description: &#39;My awesome Progressive Web App!&#39;,
+    background_color: &#39;#ffffff&#39;,
+    crossorigin: &#39;use-credentials&#39;, // 可以是null、use-credentials还是anonymous
+    icons: [
+      {
+        src: path.resolve(&#39;src/assets/icon.png&#39;),
+        sizes: [96, 128, 192, 256, 384, 512] // 多个大小
+      },
+      {
+        src: path.resolve(&#39;src/assets/large-icon.png&#39;),
+        size: &#39;1024x1024&#39; // 你还可以使用specification模式
+      }
+    ]
+  })
+]
+</code></pre><h3 id="4、imagemin-webpack-plugin"><a href="#4、imagemin-webpack-plugin" class="headerlink" title="4、imagemin-webpack-plugin"></a>4、imagemin-webpack-plugin</h3><p>imagemin-webpack-plugin 是一个webpack插件，用于使用imagemin压缩图像。</p>
+<h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><pre><code>npm install imagemin-webpack-plugin
+</code></pre><h4 id="使用-3"><a href="#使用-3" class="headerlink" title="使用"></a>使用</h4><pre><code>import ImageminPlugin from &#39;imagemin-webpack-plugin&#39;
+module.exports = {
+  plugins: [
+    // 确保插件位于添加图像的插件之后
+    new ImageminPlugin({
+      disable: process.env.NODE_ENV !== &#39;production&#39;, // 在开发过程中禁用
+      pngquant: {
+        quality: &#39;95-100&#39;
+      }
+    })
+  ]
+}
+</code></pre><h3 id="5、prerender-spa-plugin"><a href="#5、prerender-spa-plugin" class="headerlink" title="5、prerender-spa-plugin"></a>5、prerender-spa-plugin</h3><p>prerender-spa-plugin 将静态HTML预渲染到单页应用程序中</p>
+<p>该插件的目的是提供一个简单的预渲染解决方案，该解决方案可轻松扩展并适用于任何使用webpack构建的网站或单页应用。</p>
+<h4 id="什么是预渲染？"><a href="#什么是预渲染？" class="headerlink" title="什么是预渲染？"></a>什么是预渲染？</h4><p>最近，服务器端渲染（SSR）席卷了JavaScript前端世界。事实上，你现在可以先在服务器上渲染你的网站和应用程序，然后再发送给你的客户，这绝对是一个革命性的想法（在JS客户端应用程序流行起来之前，每个人都在做的事情，这完全不是在JS客户端应用程序流行起来之前的事情）。</p>
+<p>然而，过去对PHP、ASP、JSP（等等）网站的批评，现在对服务器端渲染也是一样的。它的速度很慢，相当容易崩溃，而且难以正确实现。</p>
+<p>问题是，不管别人怎么说，你可能不需要SSR。你可以通过使用预分发来获得它几乎所有的优点(没有缺点)。预渲染基本上是启动一个无头浏览器，加载应用程序的路由，并将结果保存到一个静态HTML文件。然后，你可以将其与以前使用的任何静态文件服务解决方案一起使用。它仅适用于HTML5导航等。无需更改代码或添加服务器端渲染解决方法。</p>
+<h4 id="安装-4"><a href="#安装-4" class="headerlink" title="安装"></a>安装</h4><pre><code>yarn add -D prerender-spa-plugin
+</code></pre><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><pre><code>const path = require(&#39;path&#39;)
+const PrerenderSPAPlugin = require(&#39;prerender-spa-plugin&#39;)
+module.exports = {
+  plugins: [
+    ...
+    new PrerenderSPAPlugin({
+      // 必需的——指向webpack输出应用程序的prerender路径。
+      staticDir: path.join(__dirname, &#39;dist&#39;),
+      // 必需的 - Routes to render.
+      routes: [ &#39;/&#39;, &#39;/about&#39;, &#39;/some/deep/nested/route&#39; ],
+    })
+  ]
+}
+</code></pre><h3 id="6、duplicate-package-checker-webpack-plugin"><a href="#6、duplicate-package-checker-webpack-plugin" class="headerlink" title="6、duplicate-package-checker-webpack-plugin"></a>6、duplicate-package-checker-webpack-plugin</h3><p>这是一个webpack插件，当你的捆绑包包含同一软件包的多个版本时，会发出警告。</p>
+<h4 id="为什么？"><a href="#为什么？" class="headerlink" title="为什么？"></a>为什么？</h4><p>由于不同的软件包版本，单个软件包可能多次包含在webpack捆绑软件中。这种情况可能会在没有任何警告的情况下发生，从而导致捆绑软件中出现额外的膨胀，并可能导致难以发现的错误。</p>
+<p>该插件会在这种情况下警告你，以最大程度地减少捆绑包的大小，并避免由于意外的重复包装而导致的错误。</p>
+<h4 id="安装-5"><a href="#安装-5" class="headerlink" title="安装"></a>安装</h4><pre><code>npm install duplicate-package-checker-webpack-plugin --save-dev
+</code></pre><h4 id="使用-4"><a href="#使用-4" class="headerlink" title="使用"></a>使用</h4><p>将插件添加到你的webpack配置中：</p>
+<pre><code>const DuplicatePackageCheckerPlugin = require(&quot;duplicate-package-checker-webpack-plugin&quot;);
+module.exports = {
+  plugins: [new DuplicatePackageCheckerPlugin()]
+};
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2020/05/11/webpack_plugin/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

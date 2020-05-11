@@ -1,0 +1,432 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img2.imgtn.bdimg.com/it/u=2337344105,3018349735&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >前端微服务框架qiankun项目实践</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h2><p>最近在做微前端的项目 , 过程中真是踩了不少坑 , 在有限的资料中不断试错 , 默默无语两行泪 哈哈.  在此次将踩坑部分都记录下来, 让更多的人少走点弯路 ,   此项目使用 蚂蚁金服qiankun 为基础作为开发 . 话不多说 开讲 !!!</p>
+<h3 id="什么是qiankun（乾坤）"><a href="#什么是qiankun（乾坤）" class="headerlink" title="什么是qiankun（乾坤）"></a>什么是qiankun（乾坤）</h3><p>qiankun 是一个基于 single-spa 的微前端实现库，旨在帮助大家能更简单、无痛的构建一个生产可用微前端架构系统。</p>
+<h3 id="什么是微前端"><a href="#什么是微前端" class="headerlink" title="什么是微前端"></a>什么是微前端</h3><p>微前端架构具备以下几个核心价值：</p>
+<ul>
+<li>技术栈无关</li>
+</ul>
+<p>主框架不限制接入应用的技术栈，微应用具备完全自主权</p>
+<ul>
+<li>独立开发、独立部署</li>
+</ul>
+<p>微应用仓库独立，前后端可独立开发，部署完成后主框架自动完成同步更新</p>
+<ul>
+<li>增量升级</li>
+</ul>
+<p>在面对各种复杂场景时，我们通常很难对一个已经存在的系统做全量的技术栈升级或重构，而微前端是一种非常好的实施渐进式重构的手段和策略</p>
+<ul>
+<li>独立运行时</li>
+</ul>
+<p>每个微应用之间状态隔离，运行时状态不共享</p>
+<h3 id="主应用配置"><a href="#主应用配置" class="headerlink" title="主应用配置"></a>主应用配置</h3><p>此次项目 主应用与 子应用均为 vue ,</p>
+<h4 id="下载-qiankun"><a href="#下载-qiankun" class="headerlink" title="下载 qiankun"></a>下载 qiankun</h4><pre><code>npm install qiankun
+</code></pre><p>在主应用中注册微应用</p>
+<pre><code>// 导入乾坤函数
+import {
+  registerMicroApps,
+  setDefaultMountApp,
+  start
+} from &quot;qiankun&quot;;
+</code></pre><h4 id="封装-render-方法"><a href="#封装-render-方法" class="headerlink" title="封装 render 方法"></a>封装 render 方法</h4><p>此方法在main.js 中要初始调用一次, 主要用来挂载主应用 , 之后子应用分别依次调用 ,所以故作判断. 传入的参数分别为 子应用 的 HTML 和 加载状态 content 字段 我们用 vuex 存储 起来,方便使用</p>
+<pre><code>let app = null;
+
+function render({ appContent, loading }) {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h =&gt; h(App),
+    }).$mount(&#39;#app&#39;);
+
+  } else {
+    store.commit(&#39;microApp/changeCenter&#39;, appContent);
+    store.commit(&#39;microApp/changeLoading&#39;, loading);
+  }
+
+}
+</code></pre><h4 id="微应用注册"><a href="#微应用注册" class="headerlink" title="微应用注册"></a>微应用注册</h4><p>下文中的apps 可以为获取后数据 , 注册微应用 本文案例比较简单,方便大家理解 ,<br>在注册自应用的参数 <strong> container 与 render</strong> 踩坑比较多,下边会着重讲解.</p>
+<pre><code>function genActiveRule(routerPrefix) {
+  return location =&gt; location.pathname.startsWith(routerPrefix);
+}
+
+//传递给子应用的数据
+let msg = {
+![](https://user-gold-cdn.xitu.io/2020/4/27/171bbc5de042ec98?w=1811&amp;h=959&amp;f=gif&amp;s=4951066)
+  data:&#39;修炼爱情的辛酸,学会放好以前的渴望&#39;
+}
+
+let apps = [
+  {
+    name: &#39;linjunjie&#39;, 
+    entry: &#39;//localhost:215&#39;,  // 改成自己子应用的端口号
+    container:&#39;#subView&#39;, //节点 id   //  沙盒模式 
+    // render:render,  // 普通模式   
+    activeRule: genActiveRule(&#39;/star&#39;),
+    props:msg
+  }
+]
+   //注册的子应用 参数为数组
+registerMicroApps(apps,{
+  beforeLoad: [
+    app =&gt; {
+      console.log(app)
+      console.log(&#39;[LifeCycle] before load %c%s&#39;, &#39;color: green;&#39;, app.name);
+    },
+  ],
+  beforeMount: [
+    app =&gt; {
+      console.log(&#39;[LifeCycle] before mount %c%s&#39;, &#39;color: green;&#39;, app.name);
+    },
+  ],
+  afterUnmount: [
+    app =&gt; {
+      console.log(&#39;[LifeCycle] after unmount %c%s&#39;, &#39;color: green;&#39;, app.name);
+    },
+  ],
+});
+
+
+setDefaultMountApp(&#39;/star/linjunjie&#39;)
+
+//开启沙盒模式
+start({ 
+   sandbox :{strictStyleIsolation: true}
+})
+</code></pre><p>当微应用信息注册完之后，一旦浏览器的 url 发生变化，便会自动触发 qiankun 的匹配逻辑，所有 activeRule 规则匹配上的微应用就会被插入到指定的 container 中，同时依次调用微应用暴露出的生命周期钩子。</p>
+<h4 id="主应用为子应用准备的-展示元素"><a href="#主应用为子应用准备的-展示元素" class="headerlink" title="主应用为子应用准备的 展示元素"></a>主应用为子应用准备的 展示元素</h4><pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;div id=&quot;nav&quot;&gt;
+      &lt;!--//主应用 为子应用的跳转dom--&gt;
+      &lt;div @click=&quot;onChangePage(&#39;/star/linjunjie&#39;)&quot; &gt;林俊杰&lt;/div&gt;
+      &lt;div @click=&quot;onChangePage(&#39;/star/zhangyixin&#39;)&quot; &gt;张艺兴&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;!--//用来展子应用的 内容区--&gt;
+     &lt;div id=&quot;subView&quot; class=&quot;sub-content-wrap&quot; v-html=&quot;content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+
+  import { mapState } from &#39;vuex&#39;;
+  export default{
+    data(){
+      return {
+
+      }
+    },
+    computed:{
+    //获取子应用HTML 数据
+       ...mapState(&#39;microApp&#39;, [&#39;content&#39;]),
+       ...mapState(&#39;microApp&#39;, [&#39;mircoAppLoading&#39;]),
+    },
+
+    methods:{
+
+      //定义跳转方法
+      onChangePage(url){
+        console.log(url)
+
+        this.routerGo(url, &#39;我喜爱的男明星&#39;)
+      },
+
+      routerGo(href = &#39;/&#39;, title = null, stateObj = {}) {
+        window.history.pushState(stateObj, title, href); 
+      },
+    }
+ }
+&lt;/script&gt;
+</code></pre><h3 id="子应用配置"><a href="#子应用配置" class="headerlink" title="子应用配置"></a>子应用配置</h3><p>关于子应用的配置相对较简单 , 不需要额外下载qiankun 主要将生命钩子 导出即可</p>
+<h4 id="导出响应的生命钩子"><a href="#导出响应的生命钩子" class="headerlink" title="导出响应的生命钩子"></a>导出响应的生命钩子</h4><p>导出 bootstrap、mount、unmount 三个生命周期钩子，以供主应用在适当的时机调用。注意，实例化路由时，判断当运行在qiankun环境时，路由要添加前缀，前缀与主应用注册子应用函数genActiveRule(“/subdemo”)内的参数一致</p>
+<p>‘star’ 值需要与主应用的值对应 genActiveRule(“/star”) 中的值需要商定好 主应用与微应用都要使用</p>
+<p>如果 new VueRouter 不在main.js  中 配置 ,请将此配置移动到 main.js  方便管理</p>
+<pre><code>import routes from &#39;./router&#39; //将路由信息导出方便使用 
+
+let router = null;
+let instance = null;
+
+function render(props = {}) {
+  const { container } = props;
+  router = new VueRouter({
+    base: window.__POWERED_BY_QIANKUN__ ? &#39;/star&#39; : &#39;/&#39;,  
+    mode: &#39;history&#39;,
+    routes,
+  });
+
+  instance = new Vue({
+    router,
+    store,
+    render: h =&gt; h(App),
+  }).$mount(container ? container.querySelector(&#39;#app&#39;) : &#39;#app&#39;);
+}
+
+if (!window.__POWERED_BY_QIANKUN__) {
+  render();
+}
+
+
+export async function bootstrap() {
+  console.log(&#39;[vue] vue app bootstraped&#39;);
+}
+
+export async function mount(props) {
+ //props 包含主应用传递的参数  也包括为子应用 创建的节点信息
+  console.log(props)
+  render(props);
+}
+
+export async function unmount() {
+  instance.$destroy();
+  instance = null;
+  router = null;
+}
+</code></pre><h4 id="配置微应用的打包工具"><a href="#配置微应用的打包工具" class="headerlink" title="配置微应用的打包工具"></a>配置微应用的打包工具</h4><p>除了代码中暴露出相应的生命周期钩子之外，为了让主应用能正确识别微应用暴露出来的一些信息，微应用的打包工具需要在vue.config.js 中 增加如下配置:</p>
+<pre><code>const packageName = require(&#39;./package.json&#39;).name;
+
+module.exports = {
+  output: {
+    library: `${packageName}-[name]`,
+    libraryTarget: &#39;umd&#39;,
+    jsonpFunction: `webpackJsonp_${packageName}`,
+  },
+};
+</code></pre><h4 id="子应用判断"><a href="#子应用判断" class="headerlink" title="子应用判断"></a>子应用判断</h4><p>子应用中新建 publicPath.js  在main.js 引入</p>
+<pre><code>if (window.__POWERED_BY_QIANKUN__) { 
+//处理资源
+ __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__; 
+}
+</code></pre><h4 id="处理-资源加载问题"><a href="#处理-资源加载问题" class="headerlink" title="处理 资源加载问题"></a>处理 资源加载问题</h4><p>配置 vue.config.js</p>
+<pre><code>module.exports = {
+  publicPath:`//localhost:${port}`,
+}
+</code></pre><h4 id="vue-config-js-完整配置"><a href="#vue-config-js-完整配置" class="headerlink" title="vue.config.js 完整配置"></a>vue.config.js 完整配置</h4><pre><code>const path = require(&#39;path&#39;);
+const packageName = require(&#39;./package&#39;).name;
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
+const port = 7101; // dev port
+module.exports = {
+
+  publicPath:`//localhost:${port}`,
+  outputDir: &#39;dist&#39;,
+  assetsDir: &#39;static&#39;,
+  filenameHashing: true,
+
+  devServer: {
+    // host: &#39;0.0.0.0&#39;,
+    hot: true,
+    historyApiFallback: true,//添加 重点
+    port,
+    overlay: {
+      warnings: false,
+      errors: true,
+    },
+    headers: {
+      &#39;Access-Control-Allow-Origin&#39;: &#39;*&#39;,
+    },
+  },
+
+  configureWebpack: {
+    resolve: {
+      alias: {
+        &#39;@&#39;: resolve(&#39;src&#39;),
+      },
+    },
+    output: {
+      library: `${packageName}-[name]`,
+      libraryTarget: &#39;umd&#39;,
+      jsonpFunction: `webpackJsonp_${packageName}`,
+    },
+  },
+};
+</code></pre><h3 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h3><h4 id="当前页面为子应用时-刷新页面404"><a href="#当前页面为子应用时-刷新页面404" class="headerlink" title="当前页面为子应用时, 刷新页面404"></a>当前页面为子应用时, 刷新页面404</h4><p>以下方式均为主应用配置</p>
+<ul>
+<li>方式一 删除 mode 配置项<pre><code>mode: &#39;history&#39;, //   将此配置代码删除
+</code></pre></li>
+<li>方式二 配置404  页面</li>
+</ul>
+<p>如果没有注释掉mode: ‘history’  此参数 将404 页面重新导向  home首页</p>
+<pre><code>{
+    path: &#39;*&#39;,
+    name: &#39;indexNotFound&#39;,
+    component: resolve =&gt; require([&#39;@/components/home&#39;], resolve),
+    children: HomeChild,
+},
+</code></pre><h4 id="子应用-样式隔离-开始沙箱模式-遇到的问题"><a href="#子应用-样式隔离-开始沙箱模式-遇到的问题" class="headerlink" title="子应用 样式隔离 开始沙箱模式 遇到的问题"></a>子应用 样式隔离 开始沙箱模式 遇到的问题</h4><ul>
+<li>主应用配置sandbox :{strictStyleIsolation: true}渲染模式由 render 模式 改为 containercontainer:’#subView’, 此时 子应用的 挂载 dom  为 <div id="subView"> </div>   谨记主 container :#+id</li>
+<li>子应用配置 上文有提到  主要代码 截取<pre><code>instance = new Vue({
+  router,
+  store,
+  render: h =&gt; h(App),
+}).$mount(container ? container.querySelector(&#39;#app&#39;) : &#39;#app&#39;); //重点
+</code></pre>遇到的问题: 开启沙箱模式,如果是 采用 render 模式会报错 ,故选择container 模式</li>
+</ul>
+<p>写到这里,项目已经构建完成了 </p>
+<p>这里是完整代码 方便大家学习 代码github地址:<a href="https://github.com/suchengyong/qiankun-vue">https://github.com/suchengyong/qiankun-vue</a></p>
+<h3 id="项目问题"><a href="#项目问题" class="headerlink" title="项目问题"></a>项目问题</h3><p>为啥我项目启动后看不到子应用的效果<br>将master 主应用 main.js 中 注册的 子应用的端口号 改成自己项目的端口号即可</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>开发中还有其他坑 忘记记录了, 千万记得项目部署子应用资源跨域的问题 , 需要Nginx配置跨域问题</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2020/05/11/qiankun/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

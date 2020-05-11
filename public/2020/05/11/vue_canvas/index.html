@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img4.imgtn.bdimg.com/it/u=2846291658,2120653646&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Vue使用Canvas绘制图片、矩形、线条、文字，下载图片</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="1、-前言"><a href="#1、-前言" class="headerlink" title="1、 前言"></a>1、 前言</h2><h4 id="1-1-、业务场景"><a href="#1-1-、业务场景" class="headerlink" title="1.1 、业务场景"></a>1.1 、业务场景</h4><p>图片储存在后台中，根据图片的地址，在vue页面中，查看图片，并根据坐标标注指定区域。<br>由于浏览器的机制，使用window.location.href下载图片时，并不会保存到本地，会在浏览器打开。</p>
+<h3 id="2、-实现原理"><a href="#2、-实现原理" class="headerlink" title="2、 实现原理"></a>2、 实现原理</h3><h4 id="2-1、-绘制画布"><a href="#2-1、-绘制画布" class="headerlink" title="2.1、 绘制画布"></a>2.1、 绘制画布</h4><pre><code>&lt;el-dialog
+    title=&quot;查看图片&quot;
+    :visible.sync=&quot;dialogJPG&quot;
+    append-to-body&gt;
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;940&quot; height=&quot;570&quot;&gt;&lt;/canvas&gt;
+&lt;/el-dialog&gt;
+</code></pre><p>这里为了交互体验，使用了element-ui的弹窗方式。将canvas画布放到了弹窗中。<br>为了突出画布效果可以在css中设置一个边框。</p>
+<pre><code>#mycanvas {
+    border: 1px solid rgb(199, 198, 198);
+}
+</code></pre><h4 id="2-2-绘制图片"><a href="#2-2-绘制图片" class="headerlink" title="2.2 绘制图片"></a>2.2 绘制图片</h4><pre><code>//  imageUrl为后台提供图片地址
+doDraw(imageUrl){
+    //  获取canvas
+    var canvas = document.getElementById(&quot;mycanvas&quot;)
+    //  由于弹窗，确保已获取到
+    var a = setInterval(() =&gt;{
+        //  重复获取
+        canvas = document.getElementById(&quot;mycanvas&quot;)
+        if(!canvas){
+          return false
+        } else {
+            clearInterval(a)
+            //  可以理解为一个画笔，可画路径、矩形、文字、图像
+            var context = canvas.getContext(&#39;2d&#39;)
+            var img = new Image()
+            img.src = imageUrl
+            //  加载图片
+            img.onload = function(){
+                if(img.complete){
+                    //  根据图像重新设定了canvas的长宽
+                    canvas.setAttribute(&quot;width&quot;,img.width)
+                    canvas.setAttribute(&quot;height&quot;,img.height)
+                    //  绘制图片
+                    context.drawImage(img,0,0,img.width,img.height)
+                }
+            }
+        }
+    },1)
+},
+</code></pre><p>context.drawImage()方法的参数介绍，可参照 W3school</p>
+<h4 id="2-3-、绘制矩形"><a href="#2-3-、绘制矩形" class="headerlink" title="2.3 、绘制矩形"></a>2.3 、绘制矩形</h4><pre><code>context.strokeStyle = &quot;red&quot;
+context.lineWidth = 3;
+context.strokeRect(x, y, width, height)
+</code></pre><p>context 同上面的定义<br>strokeStyle 矩形颜色<br>lineWidth 矩形边框宽度<br>x,y,width,height 矩形位置加长宽</p>
+<h4 id="2-4-、绘制线条"><a href="#2-4-、绘制线条" class="headerlink" title="2.4 、绘制线条"></a>2.4 、绘制线条</h4><pre><code>context.moveTo(x1,y1)
+context.lineTo(x2,y2)
+context.strokeStyle = &quot;red&quot;
+context.lineWidth = 3;
+context.stroke()
+</code></pre><p>(x1,y1) (x2,y2) 线条的起点和终点坐标<br>strokeStyle lineWidth 线条的样式</p>
+<h4 id="2-5-、绘制文字"><a href="#2-5-、绘制文字" class="headerlink" title="2.5 、绘制文字"></a>2.5 、绘制文字</h4><pre><code>context.font = &quot;26px Arial bolder&quot;
+context.fillStyle = &#39;red&#39;
+context.fillText(text,x,y)
+</code></pre><p>font fillStyle 文字样式<br>text 文字内容<br>x,y 文字显示坐标</p>
+<h4 id="2-6-、下载图片"><a href="#2-6-、下载图片" class="headerlink" title="2.6 、下载图片"></a>2.6 、下载图片</h4><pre><code>// 图片地址和图片名称
+downIamge (imgsrc, name) {
+    let image = new Image()
+    image.setAttribute(&#39;crossOrigin&#39;, &#39;anonymous&#39;)
+    image.onload = function () {
+        let canvas = document.createElement(&#39;canvas&#39;)
+        canvas.width = image.width
+        canvas.height = image.height
+        let context = canvas.getContext(&#39;2d&#39;)
+        context.drawImage(image, 0, 0, image.width, image.height)
+        let url = canvas.toDataURL(&#39;image/jpg&#39;)
+        let a = document.createElement(&#39;a&#39;)
+        let event = new MouseEvent(&#39;click&#39;)
+        a.download = name
+        a.href = url
+        a.dispatchEvent(event)
+    }
+    image.src = imgsrc
+},
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2020/05/11/vue_canvas/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img5.imgtn.bdimg.com/it/u=2837837654,3789113455&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >h5 总结及踩坑记录</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="适配方案"><a href="#适配方案" class="headerlink" title="适配方案"></a>适配方案</h3><p>这个项目里用的是 rem 适配方案，通过计算 设备宽度/设计稿宽度 的比例，来设置 html 的 font-size 属性，达到适配的目的，代码如下：</p>
+<pre><code>function setSize() {
+  // 设备宽度
+  let deviceWidth = window.screen.width;
+  // 设计稿宽度
+  const baseValue = 750;
+  // html的字体大小 = (设备宽度 / 设计稿宽度) * 100
+  document.documentElement.style.fontSize = (deviceWidth / baseValue) * 100 + &#39;px&#39;;
+}
+
+// DOM树加载完执行
+window.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+  setSize();
+})
+
+// 屏幕变化就执行
+window.addEventListener(&quot;resize&quot;, function () {
+  setSize();
+})
+
+setSize();
+</code></pre><h3 id="资源的预加载"><a href="#资源的预加载" class="headerlink" title="资源的预加载"></a>资源的预加载</h3><p>资源的预加载用的是 preloadjs<br>中文官网：www.createjs.cc/preloadjs<br>用法也是极其简单：</p>
+<pre><code>var queue = new window.createjs.LoadQueue(true);
+  queue.on(&quot;complete&quot;, this.allLoadComplete);  // 所有文件加载完成时触发
+  queue.on(&quot;fileload&quot;, this.aloneLoadComplete);  // 单个文件加载完成时触发
+  queue.on(&quot;progress&quot;, this.fileProgress);  // 加载进度
+  queue.loadManifest(allImg);  // 需要加载的资源数组
+  queue.load()
+</code></pre><h3 id="如何解决需要引入很多图片的问题"><a href="#如何解决需要引入很多图片的问题" class="headerlink" title="如何解决需要引入很多图片的问题"></a>如何解决需要引入很多图片的问题</h3><p>这里用到了 webpack 的 api: require.context，当项目需要引入很多资源时，这项技术是必须要掌握的<br>可以阅读 使用require.context自动导入ES模块 - yeyan1996 这位大佬的文章，本文不做深入探讨</p>
+<h3 id="html2canvas-截取页面时图片模糊"><a href="#html2canvas-截取页面时图片模糊" class="headerlink" title="html2canvas 截取页面时图片模糊"></a>html2canvas 截取页面时图片模糊</h3><p>如果截取的区域里有涉及到图片，不要用 background 设置图片，全部替换成 img 标签<br>这样可以大大提升图片的清晰度</p>
+<h3 id="ios-键盘会把页面顶上去-不会自动下来"><a href="#ios-键盘会把页面顶上去-不会自动下来" class="headerlink" title="ios 键盘会把页面顶上去 不会自动下来"></a>ios 键盘会把页面顶上去 不会自动下来</h3><p>问题描述：移动端 ios 键盘弹起后，会把页面顶上去，输入完成后页面不会自动下来<br>解决办法：</p>
+<pre><code>document.body.addEventListener(&#39;focusout&#39;, function () {
+    window.scrollTo(0,0);
+});
+</code></pre><p>当监听到 body 里有元素失去焦点时，就把页面滚上去</p>
+<blockquote>
+<p>focusout: 当元素即将失去焦点时，focusout 事件被触发。focusout 事件和 blur 事件之间的主要区别在于后者不会冒泡<br>—— MDN</p>
+<h3 id="滑动加载以及获取body实际高度的坑"><a href="#滑动加载以及获取body实际高度的坑" class="headerlink" title="滑动加载以及获取body实际高度的坑"></a>滑动加载以及获取body实际高度的坑</h3><p>滑动加载的关键就是如果页面滑动到了底部，就进行数据的请求，要事先和后端沟通好数据怎么返回<br>滑动到页面底部的条件：滚动条离顶部的距离（document.body.scrollTop）+ 窗口的文档显示区的高度（window.innerHeight）&gt;= 文档实际高度（document.body.scrollHeight）<br>这里有个坑，关于获取文档实际高度的：<br>document.body.scrollHeight 可以在手机上获取到实际文档高度，但在 chrome 里获取到的高度是 0<br>document.documentElement.scrollHeight 在 chrome 里可以获取到正常的，但在手机上获取的高度是 0<br>这样的话，还要判断当前设备是手机还是 pc 然后再去获取吗，No No No，有个优雅的写法：</p>
+<pre><code>// 获取文档实际高度/移动端
+var bodyHeight = Math.max(
+  document.documentElement.scrollHeight,
+  document.body.scrollHeight
+);
+</code></pre></blockquote>
+<h3 id="去除-iphone-x-的小尾巴"><a href="#去除-iphone-x-的小尾巴" class="headerlink" title="去除 iphone x 的小尾巴"></a>去除 iphone x 的小尾巴</h3><p>大家管这玩意叫胡子，我比较喜欢叫小尾巴~，就是 iphone x 下面那一根玩意<br>想要了解更多请点击：imweb.io/topic/5baa3…<br>我在这里就说说我是怎么用的<br>在 meta 标签里加上 viewport-fit=cover</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover&quot; /&gt;
+</code></pre><p>然后在底部的样式里加上样式：</p>
+<pre><code>bottom: env(safe-area-inset-bottom);
+bottom: 0;  // 这一句也要加上
+</code></pre><p>没有小尾巴的机型需要用到这个样式<br>这里的 safe-area-inset-bottom 的意思是：在 Viewport底部的安全区域内设置量（CSS像素），更多方向看下图</p>
+<h3 id="ios-最新版系统-微信浏览器-html2canvas-生成图片失败"><a href="#ios-最新版系统-微信浏览器-html2canvas-生成图片失败" class="headerlink" title="ios 最新版系统 微信浏览器 html2canvas 生成图片失败"></a>ios 最新版系统 微信浏览器 html2canvas 生成图片失败</h3><p>这个项目里有个生成图片的功能，需要保存用户操作过的一些东西，其他设备都正常，唯独 ios 最新版的系统有问题<br>debug 了一波后发现，这他瞄的根本没有执行这个函数，找一半天也没找到为什么，后来看 issues 发现有人说把版本换成 rc.4 的就可以了<br>issues：github.com/niklasvh/ht…</p>
+<h3 id="emoji-表情转码"><a href="#emoji-表情转码" class="headerlink" title="emoji 表情转码"></a>emoji 表情转码</h3><p>项目测试的时候，发现 textarea 标签里可以输入表情，紧接着，接口就报错了，一查看，虽然支持输入表情，但是不会自动对表情转码，所以提交接口的时候报错了，下面分享个 emoji 表情转字符的方法：</p>
+<pre><code>// 表情转字符
+utf16toEntities(str) {
+  var patt = /[\ud800-\udbff][\udc00-\udfff]/g // 检测utf16字符正则
+  str = str.replace(patt, function(char) {
+    var H, L, code
+    if (char.length === 2) {
+      H = char.charCodeAt(0) // 取出高位
+      L = char.charCodeAt(1) // 取出低位
+      code = (H - 0xd800) * 0x400 + 0x10000 + L - 0xdc00 // 转换算法
+      return &#39;&amp;#&#39; + code + &#39;;&#39;
+    } else {
+      return char
+    }
+  })
+  return str
+}
+</code></pre><h3 id="iOS-的-webview-中-滑动不流畅"><a href="#iOS-的-webview-中-滑动不流畅" class="headerlink" title="iOS 的 webview 中 滑动不流畅"></a>iOS 的 webview 中 滑动不流畅</h3><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>1.在滚动容器上增加滚动 touch 方法</p>
+<p>将-webkit-overflow-scrolling 值设置为 touch</p>
+<pre><code>.wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+</code></pre><p>设置滚动条隐藏： .container</p>
+<pre><code>::-webkit-scrollbar {display: none;}
+</code></pre><p>可能会导致使用position:fixed; 固定定位的元素，随着页面一起滚动</p>
+<p>2.设置 overflow</p>
+<p>设置外部 overflow 为 hidden,设置内容元素 overflow 为 auto。内部元素超出 body 即产生滚动，超出的部分 body 隐藏。</p>
+<pre><code>body {
+    overflow-y: hidden;
+}
+.wrapper {
+    overflow-y: auto;
+}
+</code></pre><blockquote>
+<p>两者结合使用更佳！</p>
+</blockquote>
+<h3 id="iOS-上拉边界下拉出现白色空白"><a href="#iOS-上拉边界下拉出现白色空白" class="headerlink" title="iOS 上拉边界下拉出现白色空白"></a>iOS 上拉边界下拉出现白色空白</h3><h4 id="表现"><a href="#表现" class="headerlink" title="表现"></a>表现</h4><p>手指按住屏幕下拉，屏幕顶部会多出一块白色区域。手指按住屏幕上拉，底部多出一块白色区域。</p>
+<h4 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h4><p>在 iOS 中，手指按住屏幕上下拖动，会触发 touchmove 事件。这个事件触发的对象是整个 webview 容器，容器自然会被拖动，剩下的部分会成空白。</p>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li>监听事件禁止滑动</li>
+</ol>
+<p>移动端触摸事件有三个，分别定义为</p>
+<pre><code>1. touchstart ：手指放在一个DOM元素上。
+2. touchmove ：手指拖曳一个DOM元素。
+3. touchend ：手指从一个DOM元素上移开。
+</code></pre><p>touchmove 事件的速度是可以实现定义的，取决于硬件性能和其他实现细节</p>
+<p>preventDefault 方法，阻止同一触点上所有默认行为，比如滚动。</p>
+<p>由此我们找到解决方案，通过监听 touchmove，让需要滑动的地方滑动，不需要滑动的地方禁止滑动。</p>
+<p>值得注意的是我们要过滤掉具有滚动容器的元素</p>
+<h5 id="实现如下："><a href="#实现如下：" class="headerlink" title="实现如下："></a>实现如下：</h5><pre><code>document.body.addEventListener(&#39;touchmove&#39;, function(e) {
+    if(e._isScroller) return;
+    // 阻止默认事件
+    e.preventDefault();
+}, {
+    passive: false
+})
+</code></pre><h3 id="click-点击事件延时与穿透"><a href="#click-点击事件延时与穿透" class="headerlink" title="click 点击事件延时与穿透"></a>click 点击事件延时与穿透</h3><h4 id="表现-1"><a href="#表现-1" class="headerlink" title="表现"></a>表现</h4><p>监听元素 click 事件，点击元素触发时间延迟约 300ms。</p>
+<p>点击蒙层，蒙层消失后，下层元素点击触发。</p>
+<h4 id="产生原因-1"><a href="#产生原因-1" class="headerlink" title="产生原因"></a>产生原因</h4><p>为什么会产生 click 延时？</p>
+<p>iOS 中的 safari，为了实现双击缩放操作，在单击 300ms 之后，如果未进行第二次点击，则执行 click 单击操作。也就是说来判断用户行为是否为双击产生的。但是，在 App 中，无论是否需要双击缩放这种行为，click 单击都会产生 300ms 延迟。</p>
+<h4 id="为什么会产生-click-点击穿透？"><a href="#为什么会产生-click-点击穿透？" class="headerlink" title="为什么会产生 click 点击穿透？"></a>为什么会产生 click 点击穿透？</h4><p>双层元素叠加时，在上层元素上绑定 touch 事件，下层元素绑定 click 事件。由于 click 发生在 touch 之后，点击上层元素，元素消失，下层元素会触发 click 事件，由此产生了点击穿透的效果。</p>
+<h4 id="原理与解决方案"><a href="#原理与解决方案" class="headerlink" title="原理与解决方案"></a>原理与解决方案</h4><p>解决方案一：使用 touchstart 替换 click</p>
+<p>前面已经介绍了，移动设备不仅支持点击，还支持几个触摸事件。那么我们现在基本思路就是用 touch 事件代替click 事件。</p>
+<p>将 click 替换成 touchstart 不仅解决了 click 事件都延时问题，还解决了穿透问题。因为穿透问题是在 touch 和 click 混用时产生。</p>
+<h5 id="在原生中使用"><a href="#在原生中使用" class="headerlink" title="在原生中使用"></a>在原生中使用</h5><pre><code>el.addEventListener(&quot;touchstart&quot;, () =&gt; { console.log(&quot;ok&quot;); }, false);
+</code></pre><h5 id="在-vue-中使用"><a href="#在-vue-中使用" class="headerlink" title="在 vue 中使用"></a>在 vue 中使用</h5><pre><code>&lt;button @touchstart=&quot;handleTouchstart()&quot;&gt;点击&lt;/button&gt;
+</code></pre><p>开源解决方案中，也是既提供了 click 事件，又提供了touchstart 事件。如 vant 中的 button 组件</p>
+<p>那么，是否可以将 click 事件全部替换成 touchstart 呢？为什么开源框架还会给出 click 事件呢？</p>
+<p>我们想象一种情景，同时需要点击和滑动的场景下。如果将 click 替换成 touchstart 会怎样？</p>
+<p>事件触发顺序: touchstart, touchmove, touchend, click。<br>很容易想象，在我需要touchmove滑动时候，优先触发了touchstart的点击事件，是不是已经产生了冲突呢？</p>
+<p>所以呢，在具有滚动的情况下，还是建议使用 click 处理。</p>
+<p>在接下来的fastclick开源库中也做了如下处理。针对 touchstart 和 touchend，截取了部分源码。</p>
+<pre><code>scrollParent = targetElement.fastClickScrollParent;
+if (scrollParent &amp;&amp; scrollParent.fastClickLastScrollTop !== scrollParent.scrollTop) {
+return true;
+}
+</code></pre><p>主要目的就是，在使用 touchstart 合成 click 事件时，保证其不在滚动的父元素之下。</p>
+<h4 id="解决方案二：使用-fastclick-库"><a href="#解决方案二：使用-fastclick-库" class="headerlink" title="解决方案二：使用 fastclick 库"></a>解决方案二：使用 fastclick 库</h4><p>使用 npm/yarn 安装后使用</p>
+<pre><code>import FastClick from &#39;fastclick&#39;;
+
+FastClick.attach(document.body, options);
+</code></pre><p>同样，使用fastclick库后，click 延时和穿透问题都没了</p>
+<p>按照我的惯例，只要涉及开源库，那么我们一定要去了解它实现的原理。主要是将现有的原生事件集合封装合成一个兼容性较强的事件集合。</p>
+<p>fastclick源码 核心代码不长， 1000 行不到。有兴趣可以了解一下!</p>
+<h3 id="软键盘将页面顶起来、收起未回落问题"><a href="#软键盘将页面顶起来、收起未回落问题" class="headerlink" title="软键盘将页面顶起来、收起未回落问题"></a>软键盘将页面顶起来、收起未回落问题</h3><h4 id="表现-2"><a href="#表现-2" class="headerlink" title="表现"></a>表现</h4><p>Android 手机中，点击 input 框时，键盘弹出，将页面顶起来，导致页面样式错乱。</p>
+<p>移开焦点时，键盘收起，键盘区域空白，未回落。</p>
+<h4 id="产生原因-2"><a href="#产生原因-2" class="headerlink" title="产生原因"></a>产生原因</h4><p>我们在app 布局中会有个固定的底部。安卓一些版本中，输入弹窗出来，会将解压 absolute 和 fixed 定位的元素。导致可视区域变小，布局错乱。</p>
+<h4 id="原理与解决方案-1"><a href="#原理与解决方案-1" class="headerlink" title="原理与解决方案"></a>原理与解决方案</h4><p>软键盘将页面顶起来的解决方案，主要是通过监听页面高度变化，强制恢复成弹出前的高度。</p>
+<pre><code>// 记录原有的视口高度
+const originalHeight = document.body.clientHeight || document.documentElement.clientHeight;
+
+window.onresize = function(){
+  var resizeHeight = document.documentElement.clientHeight || document.body.clientHeight;
+  if(resizeHeight &lt; originalHeight ){
+    // 恢复内容区域高度
+    // const container = document.getElementById(&quot;container&quot;)
+    // 例如 container.style.height = originalHeight;
+  }
+}
+</code></pre><p>键盘不能回落问题出现在 iOS 12+ 和 wechat 6.7.4+ 中，而在微信 H5 开发中是比较常见的 Bug。</p>
+<h4 id="兼容原理，1-判断版本类型-2-更改滚动的可视区域"><a href="#兼容原理，1-判断版本类型-2-更改滚动的可视区域" class="headerlink" title="兼容原理，1.判断版本类型 2.更改滚动的可视区域"></a>兼容原理，1.判断版本类型 2.更改滚动的可视区域</h4><pre><code>const isWechat = window.navigator.userAgent.match(/MicroMessenger\/([\d\.]+)/i);
+if (!isWechat) return;
+const wechatVersion = wechatInfo[1];
+const version = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+
+ // 如果设备类型为iOS 12+ 和wechat 6.7.4+，恢复成原来的视口
+if (+wechatVersion.replace(/\./g, &#39;&#39;) &gt;= 674 &amp;&amp; +version[1] &gt;= 12) {
+  window.scrollTo(0, Math.max(document.body.clientHeight, document.documentElement.clientHeight));
+}
+</code></pre><blockquote>
+<p>window.scrollTo(x-coord, y-coord)，其中window.scrollTo(0, clientHeight)恢复成原来的视口</p>
+</blockquote>
+<h3 id="iPhone-X系列安全区域适配问题"><a href="#iPhone-X系列安全区域适配问题" class="headerlink" title="iPhone X系列安全区域适配问题"></a>iPhone X系列安全区域适配问题</h3><h4 id="表现-3"><a href="#表现-3" class="headerlink" title="表现"></a>表现</h4><p>头部刘海两侧区域或者底部区域，出现刘海遮挡文字，或者呈现黑底或白底空白区域。</p>
+<h4 id="产生原因-3"><a href="#产生原因-3" class="headerlink" title="产生原因"></a>产生原因</h4><p>iPhone X 以及它以上的系列，都采用刘海屏设计和全面屏手势。头部、底部、侧边都需要做特殊处理。才能适配 iPhone X 的特殊情况。</p>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><p>设置安全区域，填充危险区域，危险区域不做操作和内容展示。</p>
+<blockquote>
+<p>危险区域指头部不规则区域，底部横条区域，左右触发区域。<br>具体操作为：viewport-fit meta 标签设置为 cover，获取所有区域填充。判断设备是否属于 iPhone X，给头部底部增加适配层</p>
+</blockquote>
+<h4 id="viewport-fit-有-3-个值分别为："><a href="#viewport-fit-有-3-个值分别为：" class="headerlink" title="viewport-fit 有 3 个值分别为："></a>viewport-fit 有 3 个值分别为：</h4><ul>
+<li>auto：此值不影响初始布局视图端口，并且整个web页面都是可查看的。</li>
+<li>contain：视图端口按比例缩放，以适合显示内嵌的最大矩形。</li>
+<li>cover：视图端口被缩放以填充设备显示。强烈建议使用 safe area inset 变量，以确保重要内容不会出现在显示之外</li>
+</ul>
+<h4 id="设置-viewport-fit-为-cover"><a href="#设置-viewport-fit-为-cover" class="headerlink" title="设置 viewport-fit 为 cover"></a>设置 viewport-fit 为 cover</h4><pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover&quot;&gt;
+</code></pre><p>增加适配层</p>
+<p>使用 safe area inset 变量</p>
+<pre><code>/* 适配 iPhone X 顶部填充*/
+@supports (top: env(safe-area-inset-top)){
+  body,
+  .header{
+      padding-top: constant(safe-area-inset-top, 40px);
+      padding-top: env(safe-area-inset-top, 40px);
+      padding-top: var(safe-area-inset-top, 40px);
+  }
+}
+/* 判断iPhoneX 将 footer 的 padding-bottom 填充到最底部 */
+@supports (bottom: env(safe-area-inset-bottom)){
+    body,
+    .footer{
+        padding-bottom: constant(safe-area-inset-bottom, 20px);
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+        padding-top: var(safe-area-inset-bottom, 20px);
+    }
+}
+</code></pre><blockquote>
+<p>safe-area-inset-top, safe-area-inset-right, safe-area-inset-bottom, safe-area-inset-left safe-area-inset-*由四个定义了视口边缘内矩形的 top, right, bottom 和 left 的环境变量组成，这样可以安全地放入内容，而不会有被非矩形的显示切断的风险。对于矩形视口，例如普通的笔记本电脑显示器，其值等于零。对于非矩形显示器（如圆形表盘，iPhoneX 屏幕），在用户代理设置的四个值形成的矩形内，所有内容均可见。</p>
+</blockquote>
+<p>其中 env() 用法为 env( <custom-ident> , <declaration-value>? )，第一个参数为自定义的区域，第二个为备用值。</p>
+<p>其中 var() 用法为 var( <custom-property-name> , <declaration-value>? )，作用是在 env() 不生效的情况下，给出一个备用值。</p>
+<p>constant（） 被 css 2017-2018 年为草稿阶段，是否已被标准化未知。而其他iOS 浏览器版本中是否有此函数未知，作为兼容处理而添加进去。</p>
+<h3 id="页面生成为图片和二维码问题"><a href="#页面生成为图片和二维码问题" class="headerlink" title="页面生成为图片和二维码问题"></a>页面生成为图片和二维码问题</h3><h4 id="表现-4"><a href="#表现-4" class="headerlink" title="表现"></a>表现</h4><p>在工作中有需要将页面生成图片或者二维码的需求。可能我们第一想到的，交给后端来生成更简单。但是这样我们需要把页面代码全部传给后端，网络性能消耗太大。</p>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><h4 id="生成二维码"><a href="#生成二维码" class="headerlink" title="生成二维码"></a>生成二维码</h4><p>使用 QRCode 生成二维码</p>
+<pre><code>import QRCode from &#39;qrcode&#39;;
+// 使用 async 生成图片
+const options = {};
+const url = window.location.href;
+async url =&gt; {
+  try {
+    console.log(await QRCode.toDataURL(url, options))
+  } catch (err) {
+    console.error(err);
+  }
+}
+</code></pre><p>将 await QRCode.toDataURL(url, options) 赋值给 图片 url 即可</p>
+<h4 id="生成图片"><a href="#生成图片" class="headerlink" title="生成图片"></a>生成图片</h4><p>主要是使用 htmlToCanvas 生成 canvas 画布</p>
+<pre><code>import html2canvas from &#39;html2canvas&#39;;
+
+html2canvas(document.body).then(function(canvas) {
+    document.body.appendChild(canvas);
+});
+</code></pre><p>但是不单单在此处就完了，由于是 canvas 的原因。移动端生成出来的图片比较模糊。</p>
+<p>我们使用一个新的 canvas 方法多倍生成，放入一倍容器里面，达到更加清晰的效果，通过超链接下载图片 下载文件简单实现，更完整的实现方式之后更新</p>
+<pre><code>const scaleSize = 2;
+const newCanvas = document.createElement(&quot;canvas&quot;);
+const target = document.querySelector(&#39;div&#39;);
+const width = parseInt(window.getComputedStyle(target).width);
+const height = parseInt(window.getComputedStyle(target).height);
+newCanvas.width = width * scaleSize;
+newCanvas.height = widthh * scaleSize;
+newCanvas.style.width = width + &quot;px&quot;;
+newCanvas.style.height =width + &quot;px&quot;;
+const context = newCanvas.getContext(&quot;2d&quot;);
+context.scale(scaleSize, scaleSize);
+html2canvas(document.querySelector(&#39;.demo&#39;), { canvas: newCanvas }).then(function(canvas) {
+  // 简单的通过超链接设置下载功能
+  document.querySelector(&quot;.btn&quot;).setAttribute(&#39;href&#39;, canvas.toDataURL());
+}
+</code></pre><blockquote>
+<p>根据需要设置 scaleSize 大小</p>
+</blockquote>
+<h3 id="H5-调试相关方案策略"><a href="#H5-调试相关方案策略" class="headerlink" title="H5 调试相关方案策略"></a>H5 调试相关方案策略</h3><h4 id="表现-5"><a href="#表现-5" class="headerlink" title="表现"></a>表现</h4><p>调试代码一般就是为了查看数据和定位 bug。分为两种场景，一种是开发和测试时调试，一种是生产环境上调试。</p>
+<blockquote>
+<p>为什么有生产环境上调试呢？有些时候测试环境上没法复现这个 bug，测试环境和生产环境不一致，此时就需要紧急生产调试。</p>
+</blockquote>
+<p>在 PC 端开发时，我们可以直接掉出控制台，使用浏览器提供的工具操作devtools或者查看日志。但是在 App 内部我们怎么做呢？</p>
+<h4 id="原理与解决方案-2"><a href="#原理与解决方案-2" class="headerlink" title="原理与解决方案"></a>原理与解决方案</h4><h4 id="1-vconsole-控制台插件"><a href="#1-vconsole-控制台插件" class="headerlink" title="1. vconsole 控制台插件"></a>1. vconsole 控制台插件</h4><p>使用方法也很简单</p>
+<pre><code>import Vconsole from &#39;vconsole&#39;
+
+new Vconsole()
+</code></pre><p>有兴趣看看它实现的基本原理，我们关注的点应该在 vsconsole 如何打印出我们所有 log 的 腾讯开源vconsole</p>
+<p>上述方法仅用于开发和测试。生产环境中不允许出现，所以，使用时需要对环境进行判断。</p>
+<pre><code>import Vconsole from &#39;vconsole&#39;
+if (process.env.NODE_ENV !== &#39;production&#39;) {
+    new Vconsole()
+}
+</code></pre><h4 id="2-代理-spy-debugger"><a href="#2-代理-spy-debugger" class="headerlink" title="2. 代理 + spy-debugger"></a>2. 代理 + spy-debugger</h4><p>操作稍微有点麻烦，不过我会详细写出，大致分为 4 个步骤</p>
+<h4 id="安装插件-全局安装"><a href="#安装插件-全局安装" class="headerlink" title="安装插件(全局安装)"></a>安装插件(全局安装)</h4><pre><code>sudo npm install spy-debugger -g
+</code></pre><h4 id="手机与电脑置于同一-wifi-下，手机设置代理"><a href="#手机与电脑置于同一-wifi-下，手机设置代理" class="headerlink" title="手机与电脑置于同一 wifi 下，手机设置代理"></a>手机与电脑置于同一 wifi 下，手机设置代理</h4><p>设置手机的 HTTP 代理，代理 IP 地址设置为 PC 的 IP 地址，端口为spy-debugger的启动端口</p>
+<blockquote>
+<p>spy-debugger 默认端口：9888</p>
+<p>Android ：设置 - WLAN - 长按选中网络 - 修改网络 - 高级 - 代理设置 - 手动</p>
+<p>IOS ：设置 - Wi-Fi - 选中网络, 点击感叹号, HTTP 代理手动</p>
+</blockquote>
+<h4 id="手机打开浏览器或者-app-中-H5-页面"><a href="#手机打开浏览器或者-app-中-H5-页面" class="headerlink" title="手机打开浏览器或者 app 中 H5 页面"></a>手机打开浏览器或者 app 中 H5 页面</h4><h4 id="打开桌面日志网站进行调试，点击-npm-控制台监听地址。查看抓包和-H5-页面结构"><a href="#打开桌面日志网站进行调试，点击-npm-控制台监听地址。查看抓包和-H5-页面结构" class="headerlink" title="打开桌面日志网站进行调试，点击 npm 控制台监听地址。查看抓包和 H5 页面结构"></a>打开桌面日志网站进行调试，点击 npm 控制台监听地址。查看抓包和 H5 页面结构</h4><p>这种方式可以调试生成环境的页面，不需要修改代码，可以应付大多数调试需求</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2020/05/11/h5zongjie/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

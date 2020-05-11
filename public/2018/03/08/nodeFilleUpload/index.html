@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://bpic.588ku.com/back_pic/04/58/22/775868ad60c3f9c.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >使用formidable做node的文件上传，并利用iframe让表单提交不跳转</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="使用formidable做node的文件上传，并利用iframe让表单提交不跳转"><a href="#使用formidable做node的文件上传，并利用iframe让表单提交不跳转" class="headerlink" title="使用formidable做node的文件上传，并利用iframe让表单提交不跳转"></a>使用formidable做node的文件上传，并利用iframe让表单提交不跳转</h3><ul>
+<li><p>今天做功能做到了文件上传、之前做过img的上传是用的h5的fileReader对象转base64上传 遇到纯数据文件上传确实做的时候遇到了很多问题</p>
+</li>
+<li><p>开始的时候想的用ajax传（以前base64就是长字符串、可以用ajax），发现ajax只能传字符串、不然就要引用插件、对于现在的项目来说、引入插件也会变得冗余、所以寻求一个其他的方法</p>
+</li>
+<li><p>先没管那么多、先用表单传过去看看吧、发现传文件流需要给from表单一个比较重要的属性enctype=”multipart/form-data”</p>
+</li>
+<li><p>这里是前台代码v-on：change的方法可以理解成onchange触发submit()</p>
+</li>
+</ul>
+<pre><code>&lt;form id=&quot;fileForm&quot; method=&quot;post&quot; action=&quot;/data/import&quot; enctype=&quot;multipart/form-data&quot; &gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary uploaderBtn&quot;&gt;
+            上传
+        &lt;input type=&quot;file&quot; id=&quot;test&quot; name=&quot;files&quot; v-on:change=&quot;importData(&#39;fileForm&#39;)&quot;/&gt;
+    &lt;/a&gt;
+&lt;/form&gt;
+</code></pre><ul>
+<li><p>提交之后、node这边应该用我们的主角formidable抓取请求了</p>
+</li>
+<li><p>首先install这一步是一定的</p>
+</li>
+</ul>
+<pre><code>npm install formidable --save-dev
+//fs文件操作模块（可选项）
+npm install formidable --save-dev
+</code></pre><ul>
+<li>用require的方式引入</li>
+</ul>
+<pre><code>var formidable = require(&#39;formidable&#39;);
+var fs = require(&#39;fs&#39;);
+</code></pre><ul>
+<li>方法中我们要先new一个formidable对象并设置他的属性</li>
+</ul>
+<pre><code>var form = new formidable();
+form.encoding = &#39;utf-8&#39;;        //设置编辑
+form.uploadDir = &#39;static&#39;     //设置上传目录
+form.keepExtensions = true;     //保留后缀
+form.maxFieldsSize = 2 * 1024 * 1024;   //文件大小
+</code></pre><ul>
+<li>调用form.parse()方法</li>
+</ul>
+<pre><code>form.parse(req, (err, fields, files)=&gt;{
+
+    if (err) {
+      console.log(&quot;文件上传报错&quot;+err);
+      res.send(err);        
+    }
+    //这里我把上传的文件读取出来
+    var data = fs.readFileSync(files.files.path,&#39;utf-8&#39;);
+    //你要做的操作
+    ...
+}
+</code></pre><ul>
+<li><p>到了这一步、上传可以实现了、但是前台传完文件之后会跳转到action的地址、这对于我来说是不想看到的</p>
+</li>
+<li><p>所以便有了iframe的出现</p>
+</li>
+</ul>
+<pre><code>&lt;iframe name=&quot;testIframeName&quot; style=&quot;display:none;&quot;&gt;&lt;/iframe&gt;
+&lt;form target=&quot;testIframeName&quot; id=&quot;fileForm&quot; method=&quot;post&quot; action=&quot;/data/import&quot; enctype=&quot;multipart/form-data&quot; &gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary uploaderBtn&quot;&gt;
+        上传
+        &lt;input type=&quot;file&quot; id=&quot;test&quot; name=&quot;files&quot; v-on:change=&quot;importData(&#39;fileForm&#39;)&quot;/&gt;
+    &lt;/a&gt;
+&lt;/form&gt;
+</code></pre><ul>
+<li>改写了一下前台页面、加入了一个iframe并且把他们用target链接到一起、意义在于、form提交之后、iframe去跳转、form表单不会跳转、iframe是看不见的、所以达到了简单实现我们要的效果</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/03/08/nodeFilleUpload/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

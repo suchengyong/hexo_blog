@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img2.imgtn.bdimg.com/it/u=3313838802,2768404782&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >判断浏览器为PC还是移动端</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="判断浏览器为PC还是移动端"><a href="#判断浏览器为PC还是移动端" class="headerlink" title="判断浏览器为PC还是移动端"></a>判断浏览器为PC还是移动端</h3><ul>
+<li>判断userAgent、根据正则、找出对应的设备或者浏览器</li>
+</ul>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == &quot;ipad&quot;;
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == &quot;iphone os&quot;;
+        var bIsMidp = sUserAgent.match(/midp/i) == &quot;midp&quot;;
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == &quot;rv:1.2.3.4&quot;;
+        var bIsUc = sUserAgent.match(/ucweb/i) == &quot;ucweb&quot;;
+        var bIsAndroid = sUserAgent.match(/android/i) == &quot;android&quot;;
+        var bIsCE = sUserAgent.match(/windows ce/i) == &quot;windows ce&quot;;
+        var bIsWM = sUserAgent.match(/windows mobile/i) == &quot;windows mobile&quot;;
+        document.writeln(&quot;您的浏览设备为：&quot;);
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            document.writeln(&quot;phone&quot;);
+        } else {
+            document.writeln(&quot;pc&quot;);
+        }
+    }
+
+    browserRedirect();
+&lt;/script&gt;
+</code></pre><h3 id="判断滚动条是向上还是向下"><a href="#判断滚动条是向上还是向下" class="headerlink" title="判断滚动条是向上还是向下"></a>判断滚动条是向上还是向下</h3><ul>
+<li>在写wap中遇到了这个需求、把代码记录下来吧</li>
+</ul>
+<pre><code>$(document).ready(function(){
+    var position=0,top=0;
+
+    $(window).scroll(function(e){
+            position = $(this).scrollTop();
+
+            if(top&lt;=position){//下滚
+                .......
+            }
+
+            else{//上滚
+                .......
+            }
+            setTimeout(function(){top = position;},0);
+    });
+});
+</code></pre><h3 id="制作两端对齐响应式布局"><a href="#制作两端对齐响应式布局" class="headerlink" title="制作两端对齐响应式布局"></a>制作两端对齐响应式布局</h3><blockquote>
+<p>制作这个布局主要用到了text-align: justify</p>
+<p>大家应该知道、这是文字两端对齐的css样式</p>
+<p>但是注意了（敲敲黑板） 没有换行的文本不会生效</p>
+<p>那么这里有一个投机的办法、就是用:after的content属性为它创造换行的环境</p>
+<p>用到这个、我还想起了一个和他很像的属性text-align-last: justify</p>
+<p>但是text-align-last 只有IE和Firefox支持</p>
+<p>那么就不考虑、喜欢尝试的同学可以下去自己试一下</p>
+<p>那么只需要把元素设为inline-block并且加上after伪类就可以了</p>
+</blockquote>
+<pre><code>&lt;style&gt;
+  .test{
+    text-align: justify;
+  }
+  .test .box{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+  .test:after {width: 100%;height: 0;margin: 0;display: inline-block;overflow: hidden;content: &#39;&#39;;}
+&lt;/style&gt;
+
+&lt;div class=&quot;test&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-center&quot;&gt;试着放大缩小窗口&lt;/div&gt;
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/02/26/userAgent/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://d.hiphotos.baidu.com/image/h%3D300/sign=6a4d01e85e66d01661199828a72ad498/8601a18b87d6277fcdb9b01d24381f30e924fc68.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >HTML5 canvas制作大风车</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <ul>
+<li>下面就来介绍制作风车的过程。先上代码吧：</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;canvas id = &quot;canvas&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+
+    &lt;script&gt;
+        (function () {
+            var Pinwheel = function (canvas, options) {
+                this.canvas = document.getElementById(canvas);
+                this.options = options;
+            };
+            Pinwheel.prototype = {
+                constructor: Pinwheel,
+                show: function () {
+                    var canvas = this.canvas,//取得canvas元素
+                            width = canvas.width,//canvas元素的宽度
+                            height = canvas.height,//canvas元素的高度
+                            color = this.options.color,//风车叶子的颜色
+                            radius = this.options.radius,//整个风车的半径
+                            wheelRadius = this.options.wheelRadius,//风车叶子的半径
+                            part = this.options.part,//PI/2分成几份
+                            ctx = canvas.getContext(&quot;2d&quot;),//获取上下文
+                            num = this.options.num,//叶子数量
+                            center = {x: width / 2, y: height / 2},//绘图区域的中心
+                            point, //叶子圆心位置
+                            start = 0,//绘制叶子的开始角
+                            angle = 0,//start = angle
+                            end = Math.PI,//绘制叶子的结束角
+                            offset = Math.PI * (360 / num) / 180,//两个相邻叶子之间的角度
+                            rotateAngle = offset / part;//每次旋转的角度
+//                    window.timer = setInterval(function () {
+                        ctx.clearRect(0, 0, width, height);
+                        for (var i = 0; i &lt; num; i += 1) {
+                            ctx.beginPath();//开始绘制叶子
+                            var wheelGradient = ctx.createRadialGradient(center.x, center.y,
+                             100, center.x, center.y, 0);//创建径向渐变
+                            wheelGradient.addColorStop(0, color[i]);//起始颜色
+                            wheelGradient.addColorStop(1, &quot;#000&quot;);//结束颜色
+                            ctx.fillStyle = wheelGradient;//填充渐变样式
+                            point = {x: center.x + Math.cos(offset * i + angle) * radius, 
+                            y: center.y + Math.sin(offset * i + angle) * radius};//叶子圆心位置
+                            var x = start + offset * i;//绘制叶子的开始角
+                            var y = end + offset * i;//绘制叶子的结束角
+                            ctx.arc(point.x, point.y, wheelRadius, x, y, false);//绘制
+                            ctx.fill();//填充
+                            ctx.closePath();//结束绘制
+                        }
+                        ctx.beginPath();
+                        var dotGradient = ctx.createRadialGradient(center.x, center.y, 0, 
+                        center.x, center.y, 40);
+                        dotGradient.addColorStop(0, &quot;#fff&quot;);
+                        dotGradient.addColorStop(1, &quot;#666&quot;);
+                        ctx.fillStyle = dotGradient;
+                        ctx.arc(center.x, center.y, 25, 0, 2 * Math.PI, false);
+                        ctx.fill();
+                        ctx.closePath();
+                        angle += rotateAngle;
+                        start = angle;
+                        end = Math.PI + angle;
+//                    }, 20)
+                },
+                hide: function () {
+                    clearInterval(window.timer);
+                }
+            };
+
+            var options = {
+                num: 4,
+                color: [&quot;red&quot;, &quot;yellow&quot;, &quot;blue&quot;, &quot;green&quot;],
+                radius: 50,
+                wheelRadius: 50,
+                part: 50
+            };
+
+            var a = new Pinwheel(&quot;canvas&quot;, options);
+            a.show();
+        }());
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul>
+<li>首先，确定需要的各项参数：</li>
+</ul>
+<pre><code>var canvas = this.canvas,//取得canvas元素
+width = canvas.width,//canvas元素的宽度
+height = canvas.height,//canvas元素的高度
+color = this.options.color,//风车叶子的颜色
+radius = this.options.radius,//整个风车的半径
+wheelRadius = this.options.wheelRadius,//风车叶子的半径
+part = this.options.part,//PI/2分成几份
+ctx = canvas.getContext(&quot;2d&quot;),//获取上下文
+num = this.options.num,//叶子数量
+center = {x: width / 2, y: height / 2},//绘图区域的中心
+point, //叶子圆心位置
+start = 0,//绘制叶子的开始角
+angle = 0,//start = angle
+end = Math.PI,//绘制叶子的结束角
+offset = Math.PI * (360 / num) / 180,//两个相邻叶子之间的角度
+rotateAngle = offset / part;//每次旋转的角度
+</code></pre><ul>
+<li>循环绘制每个叶子：</li>
+</ul>
+<pre><code>for (var i = 0; i &lt; num; i += 1) {
+　　ctx.beginPath();//开始绘制叶子
+　　var wheelGradient = ctx.createRadialGradient(center.x, center.y, 100, center.x, center.y, 0);
+//创建径向渐变
+　　wheelGradient.addColorStop(0, color[i]);//起始颜色
+　　wheelGradient.addColorStop(1, &quot;#000&quot;);//结束颜色
+　　ctx.fillStyle = wheelGradient;//填充渐变样式
+　　point = {x: center.x + Math.cos(offset * i + angle) * radius,
+ y: center.y + Math.sin(offset * i + angle) * radius};//叶子圆心位置
+　　var x = start + offset * i;//绘制叶子的开始角
+　　var y = end + offset * i;//绘制叶子的结束角
+　　ctx.arc(point.x, point.y, wheelRadius, x, y, false);//绘制
+　　ctx.fill();//填充
+　　ctx.closePath();//结束绘制
+}
+</code></pre><ul>
+<li>绘制中间的大圆点：</li>
+</ul>
+<pre><code>ctx.beginPath();
+var dotGradient = ctx.createRadialGradient(center.x, center.y, 0, center.x, center.y, 40);
+dotGradient.addColorStop(0, &quot;#fff&quot;);
+dotGradient.addColorStop(1, &quot;#666&quot;);
+ctx.fillStyle = dotGradient;
+ctx.arc(center.x, center.y, 25, 0, 2 * Math.PI, false);
+ctx.fill();
+ctx.closePath();
+</code></pre><ul>
+<li>上面的代码已经可以制作静态的风车了，但是我们要做的是动态的，于是我们需要一个计时器。下面是计时器代码：</li>
+</ul>
+<pre><code>
+window.timer = setInterval(function () {
+　　　　ctx.clearRect(0, 0, width, height);//每次调用计时器需要重绘
+　　　　for (var i = 0; i &lt; num; i += 1) {
+　　　　　　ctx.beginPath();//开始绘制叶子
+　　　　　　var wheelGradient = ctx.createRadialGradient(center.x, center.y, 100, center.x, center.y, 0);
+//创建径向渐变
+　　　　　　wheelGradient.addColorStop(0, color[i]);//起始颜色
+　　　　　　wheelGradient.addColorStop(1, &quot;#000&quot;);//结束颜色
+　　　　　　ctx.fillStyle = wheelGradient;//填充渐变样式
+　　　　　　point = {x: center.x + Math.cos(offset * i + angle) * radius, 
+    y: center.y + Math.sin(offset * i + angle) * radius};//叶子圆心位置
+　　　　　　var x = start + offset * i;//绘制叶子的开始角
+　　　　　　var y = end + offset * i;//绘制叶子的结束角
+　　　　　　ctx.arc(point.x, point.y, wheelRadius, x, y, false);//绘制
+　　　　　　ctx.fill();//填充
+　　　　　　ctx.closePath();//结束绘制
+　　　　}
+　　　　ctx.beginPath();
+　　　　var dotGradient = ctx.createRadialGradient(center.x, center.y, 0, center.x, center.y, 40);
+　　　　dotGradient.addColorStop(0, &quot;#fff&quot;);
+　　　　dotGradient.addColorStop(1, &quot;#666&quot;);
+　　　　ctx.fillStyle = dotGradient;
+　　　　ctx.arc(center.x, center.y, 25, 0, 2 * Math.PI, false);
+　　　　ctx.fill();
+　　　　ctx.closePath();
+　　　　angle += rotateAngle;
+　　　　start = angle;
+　　　　end = Math.PI + angle;
+　　}, 20)
+</code></pre><ul>
+<li>动态的风车基本上就做完了，这是运行大风车代码：</li>
+</ul>
+<pre><code>var options = {
+　　num: 4,
+　　color: [&quot;red&quot;, &quot;yellow&quot;, &quot;blue&quot;, &quot;green&quot;],
+　　radius: 50,
+　　wheelRadius: 50,
+　　part: 50
+　　};
+var a = new Pinwheel(&quot;canvas&quot;, options);
+a.show();
+</code></pre><ul>
+<li><p>修改options对象的属性就会改变风车的状态。</p>
+</li>
+<li><p>需要停止风车运转调用这个函数：</p>
+</li>
+</ul>
+<pre><code>    hide: function () {
+　　clearInterval(window.timer);
+    }
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/02/10/canvas/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

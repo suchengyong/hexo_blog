@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://pic26.photophoto.cn/20130120/0036036864029026_b.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >工作实用总结</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="1-生成随机字符串"><a href="#1-生成随机字符串" class="headerlink" title="1.生成随机字符串"></a>1.生成随机字符串</h3><pre><code>function randomStr() {
+    return Math.random().toString(36).substring(2);
+}
+</code></pre><h3 id="2-判断一个实例是否为-数组的几种方法"><a href="#2-判断一个实例是否为-数组的几种方法" class="headerlink" title="2.判断一个实例是否为 数组的几种方法"></a>2.判断一个实例是否为 数组的几种方法</h3><pre><code>    1.console.log(arr instanceof Array)
+    2.console.log(Array.isArray(arr))
+    3.console.log(arr.constructor === Array)
+    4.console.log(Object.prototype.toString.call(arr) === &#39;[Object Array]&#39;)
+    5.console.log(Object.prototype.toString.call(function(){}))
+</code></pre><h3 id="判断滚动条是向上还是向下"><a href="#判断滚动条是向上还是向下" class="headerlink" title="判断滚动条是向上还是向下"></a>判断滚动条是向上还是向下</h3><pre><code>$(document).ready(function(){
+    var position=0,top=0;
+
+    $(window).scroll(function(e){
+            position = $(this).scrollTop();
+
+            if(top&lt;=position){//下滚
+                .......
+            }
+
+            else{//上滚
+                .......
+            }
+            setTimeout(function(){top = position;},0);
+    });
+});
+</code></pre><h3 id="利用padding制作响应式正方形"><a href="#利用padding制作响应式正方形" class="headerlink" title="利用padding制作响应式正方形"></a>利用padding制作响应式正方形</h3><ul>
+<li><p>有些情况下、我们要做响应式的布局、来应对多设备、或者多分辨率</p>
+</li>
+<li><p>来个简单的需求</p>
+</li>
+<li><p>需求：每行三个正方形、依次排开、做列表、流式</p>
+</li>
+<li><p>最简单的需求出来了、那我们直接开搞</p>
+</li>
+<li><p>首先、我们要了解到、padding的百分比是基于谁的</p>
+</li>
+<li><p>这里敲了几下黑白、这道送分题、相信很多人心中已经知道了答案</p>
+</li>
+<li><p>那就是 基于父元素的宽度</p>
+</li>
+<li><p>注意、是宽度、也就是说、利用这个特性、我们父子元素保持宽度一致、</p>
+</li>
+<li><p>子元素的padding是100%、就可以达到效果</p>
+</li>
+</ul>
+<pre><code>&lt;style&gt;
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .list{
+    width: 100%;
+    padding: 5px 16px;
+    box-sizing: border-box;
+  }
+  /*用padding的方式*/
+  .square-box{
+    margin: 5px auto;
+    padding: 0 5px;
+    box-sizing: border-box;
+    float:left;
+    width:calc(100%/3)
+  }
+  .square{
+    width: calc(100%);
+    padding-bottom: 100%;
+    background: red;
+    box-sizing: border-box;
+  }
+  /*用calc的方式*/
+  /*.square-box{
+    margin: 5px auto;
+    box-sizing: border-box;
+    float:left;
+    width:calc(100%/3)
+  }
+  .square{
+    margin: 0 auto;
+    width: calc(100% - 16px * 2);
+    padding-bottom: calc(100% - 16px * 2);
+    background: red;
+    box-sizing: border-box;
+  }*/
+&lt;/style&gt;
+
+&lt;div class=&quot;list&quot;&gt;
+  &lt;div class=&quot;square-box&quot;&gt;
+    &lt;div class=&quot;square&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;square-box&quot;&gt;
+    &lt;div class=&quot;square&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;square-box&quot;&gt;
+    &lt;div class=&quot;square&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;square-box&quot;&gt;
+    &lt;div class=&quot;square&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;square-box&quot;&gt;
+    &lt;div class=&quot;square&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-center&quot;&gt;试着放大缩小窗口&lt;/div&gt;
+</code></pre><h3 id="制作两端对齐响应式布局"><a href="#制作两端对齐响应式布局" class="headerlink" title="制作两端对齐响应式布局"></a>制作两端对齐响应式布局</h3><ul>
+<li><p>制作这个布局主要用到了text-align: justify</p>
+</li>
+<li><p>大家应该知道、这是文字两端对齐的css样式</p>
+</li>
+<li><p>但是注意了（敲敲黑板） 没有换行的文本不会生效</p>
+</li>
+<li><p>那么这里有一个投机的办法、就是用:after的content属性为它创造换行的环境</p>
+</li>
+<li><p>用到这个、我还想起了一个和他很像的属性text-align-last: justify</p>
+</li>
+<li><p>但是text-align-last 只有IE和Firefox支持</p>
+</li>
+<li><p>那么就不考虑、喜欢尝试的同学可以下去自己试一下</p>
+</li>
+<li><p>那么只需要把元素设为inline-block并且加上after伪类就可以了</p>
+</li>
+</ul>
+<pre><code>&lt;style&gt;
+  .test{
+    text-align: justify;
+  }
+  .test .box{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+  .test:after {width: 100%;height: 0;margin: 0;display: inline-block;overflow: hidden;content: &#39;&#39;;}
+&lt;/style&gt;
+
+&lt;div class=&quot;test&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-center&quot;&gt;试着放大缩小窗口&lt;/div&gt;
+</code></pre><h3 id="判断浏览器为PC还是移动端"><a href="#判断浏览器为PC还是移动端" class="headerlink" title="判断浏览器为PC还是移动端"></a>判断浏览器为PC还是移动端</h3><ul>
+<li>判断userAgent、根据正则、找出对应的设备或者浏览器</li>
+</ul>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == &quot;ipad&quot;;
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == &quot;iphone os&quot;;
+        var bIsMidp = sUserAgent.match(/midp/i) == &quot;midp&quot;;
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == &quot;rv:1.2.3.4&quot;;
+        var bIsUc = sUserAgent.match(/ucweb/i) == &quot;ucweb&quot;;
+        var bIsAndroid = sUserAgent.match(/android/i) == &quot;android&quot;;
+        var bIsCE = sUserAgent.match(/windows ce/i) == &quot;windows ce&quot;;
+        var bIsWM = sUserAgent.match(/windows mobile/i) == &quot;windows mobile&quot;;
+        document.writeln(&quot;您的浏览设备为：&quot;);
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            document.writeln(&quot;phone&quot;);
+        } else {
+            document.writeln(&quot;pc&quot;);
+        }
+    }
+
+    browserRedirect();
+&lt;/script&gt;
+</code></pre><h3 id="Js-将字符串对象转换成对象的三种方法"><a href="#Js-将字符串对象转换成对象的三种方法" class="headerlink" title="Js 将字符串对象转换成对象的三种方法"></a>Js 将字符串对象转换成对象的三种方法</h3><ul>
+<li><p>如果某天从后端返回的对象莫名其妙的变成了字符串、需要前端处理成对象、再去取值的话,那就需要用到、字符串强转对象了</p>
+</li>
+<li><p>首先我们要转换的东西可能是这个样子：</p>
+</li>
+</ul>
+<blockquote>
+<p>‘{“name”:”test”}’</p>
+</blockquote>
+<ul>
+<li><p>JSON的标准写法应该是KEY和VALUE都带引号的</p>
+</li>
+<li><p>我们要将这样的字符串转为对象、有三种方法可以参考使用</p>
+</li>
+<li><p>第一种可能是大家用的非常之多的、用JSON对象下面的方法.parse()</p>
+</li>
+<li><p>写起来可能是这样的：</p>
+</li>
+</ul>
+<pre><code>var jsonData = &#39;{&quot;name&quot;:&quot;test&quot;}&#39;;
+var obj = JSON.parse(jsonData)
+console.log(obj.name);//&quot;test&quot;
+JSON.parse()和JSON.stringify() 是我用的比较多的方法
+</code></pre><ul>
+<li>第二种是利用JS的eval()函数</li>
+</ul>
+<pre><code>var jsonData = &#39;{&quot;name&quot;:&quot;test&quot;}&#39;;
+var obj= eval(&#39;(&#39;+ jsonData +&#39;)&#39;);
+console.log(obj.name);//&quot;test&quot;
+</code></pre><ul>
+<li>这里要解释一下、为什么要再eval里面头尾加入圆括号、因为eval()是以函数语句解析的、那么其中的{}大括号会用作标记为作用域、或者方法体类似的概念、我们想要把他解析成对象就不会成功了</li>
+</ul>
+<blockquote>
+<p>eval(‘{}’)<br>eval(‘({})’)//返回的是一个obj<br>第三种是用Function对象</p>
+</blockquote>
+<pre><code>var jsonData = &#39;{&quot;name&quot;:&quot;test&quot;}&#39;;
+var obj = new Function(&#39;return &#39; + jsonData)();
+console.log(obj.name);//&quot;test&quot;
+</code></pre><ul>
+<li><p>原理比较类似第二种、将return 拼接字符串对象、放入function</p>
+</li>
+<li><p>执行的时候、由于将字符串解析成了语句、所以return出去的是一个对象</p>
+</li>
+<li><p>以上就是今天所要说的三种方法、欢迎补充！</p>
+</li>
+</ul>
+<h3 id="水平出现滚动条布局"><a href="#水平出现滚动条布局" class="headerlink" title="水平出现滚动条布局"></a>水平出现滚动条布局</h3><pre><code>  &lt;style&gt;
+    ul{
+      width: 50%;
+      height: 100px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      overflow-x: scroll; /* 1 */
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-overflow-scrolling: touch; /* 2 */
+      text-align: justify; /* 3 */
+      &amp;::-webkit-scrollbar {
+          display: none;
+      }
+  }
+  ul li{
+    display: inline-block;
+    width: 100px;
+    background-color: red;
+    margin-right: 20px;
+    height: 80px;
+  }
+
+  &lt;/style&gt;
+ &lt;ul&gt;
+      &lt;li&gt;1&lt;/li&gt;
+      &lt;li&gt;2&lt;/li&gt;
+      &lt;li&gt;3&lt;/li&gt;
+      &lt;li&gt;4&lt;/li&gt;
+      &lt;li&gt;5&lt;/li&gt;
+      &lt;li&gt;6&lt;/li&gt;
+      &lt;li&gt;7&lt;/li&gt;
+      &lt;li&gt;8&lt;/li&gt;
+      &lt;li&gt;9&lt;/li&gt;
+      &lt;li&gt;10&lt;/li&gt;
+      &lt;li&gt;11&lt;/li&gt;
+      &lt;li&gt;12&lt;/li&gt;
+      &lt;li&gt;13&lt;/li&gt;
+      &lt;li&gt;14&lt;/li&gt;
+      &lt;li&gt;15&lt;/li&gt;
+      &lt;li&gt;16&lt;/li&gt;
+      &lt;li&gt;17&lt;/li&gt;
+      &lt;li&gt;18&lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre><h3 id="百度语音阅读接口"><a href="#百度语音阅读接口" class="headerlink" title="百度语音阅读接口"></a>百度语音阅读接口</h3><blockquote>
+<p><a href="http://fanyi.baidu.com/gettts?lan=zh&amp;text=&quot;哈哈哈&quot;&amp;spd=5&amp;source=web">http://fanyi.baidu.com/gettts?lan=zh&amp;text=&quot;哈哈哈&quot;&amp;spd=5&amp;source=web</a></p>
+</blockquote>
+<h3 id="gitHub创建一个仓库时选择："><a href="#gitHub创建一个仓库时选择：" class="headerlink" title="gitHub创建一个仓库时选择："></a>gitHub创建一个仓库时选择：</h3><blockquote>
+<p>1.勾选Initialize this repository with a README<br>2.Add.gitignore:选择node<br>3.Add a license:选择MIT License</p>
+</blockquote>
+<h3 id="导航添加鼠标移动添加下划线效果"><a href="#导航添加鼠标移动添加下划线效果" class="headerlink" title="导航添加鼠标移动添加下划线效果"></a>导航添加鼠标移动添加下划线效果</h3><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;title&gt;Examples&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;
+&lt;style&gt;
+  ul{
+
+    width: 800px;
+    margin: 0 auto;
+    height: 50px;
+    font-size: 0;
+  }
+  li{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 50px;
+    border-bottom:0px solid #000;
+  }
+  li::before{
+    content: &#39;&#39;;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-bottom:3px solid red;
+    transition: 0.2s all linear;
+  }
+  li:hover::before{
+    width: 100%;
+    left:0;
+  }
+  li:hover ~ li:before{
+    left:0;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;哈哈哈&lt;/li&gt;
+      &lt;li&gt;行搜索&lt;/li&gt;
+      &lt;li&gt;很好&lt;/li&gt;
+      &lt;li&gt;不好吗密码&lt;/li&gt;
+      &lt;li&gt;很棒部&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/03/08/workuser/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

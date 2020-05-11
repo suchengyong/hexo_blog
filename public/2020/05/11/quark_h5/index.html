@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img2.imgtn.bdimg.com/it/u=1262566837,2339302645&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Vue + Koa从零打造一个H5页面可视化编辑器——Quark-h5</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想必你一定使用过易企秀或百度H5等微场景生成工具制作过炫酷的h5页面，除了感叹其神奇之处有没有想过其实现方式呢？本文从零开始实现一个H5编辑器项目完整设计思路和主要实现步骤，并开源前后端代码。有需要的小伙伴可以按照该教程从零实现自己的H5编辑器。（实现起来并不复杂，该教程只是提供思路，并非最佳实践）</p>
+<p>原文章地址：<a href="https://mp.weixin.qq.com/s/SG9ZYIivbpbXOOTlal9Akw">https://mp.weixin.qq.com/s/SG9ZYIivbpbXOOTlal9Akw</a></p>
+<p>Github: <a href="https://github.com/huangwei9527/quark-h5">https://github.com/huangwei9527/quark-h5</a></p>
+<p>演示地址：<a href="http://47.104.247.183:4000/">http://47.104.247.183:4000/</a></p>
+<h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><p>前端：vue: 模块化开发少不了angular，react，vue三选一，这里选择了vue。vuex: 状态管理sass: css预编译器。element-ui：不造轮子，有现成的优秀的vue组件库当然要用起来。没有的自己再封装一些就可以了。loadsh：工具类</p>
+<p>服务端：koa：后端语言采用nodejs，koa文档和学习资料也比较多，express原班人马打造，这个正合适。mongodb：一个基于分布式文件存储的数据库，比较灵活。</p>
+<h3 id="工程搭建"><a href="#工程搭建" class="headerlink" title="工程搭建"></a>工程搭建</h3><h4 id="基于vue-cli3环境搭建"><a href="#基于vue-cli3环境搭建" class="headerlink" title="基于vue-cli3环境搭建"></a>基于vue-cli3环境搭建</h4><ul>
+<li>如何规划好我们项目的目录结构？首先我们需要有一个目录作为前端项目，一个目录作为后端项目。所以我们要对vue-cli 生成的项目结构做一下改造：<pre><code>···
+·
+|-- client// 原 src 目录，改成 client 用作前端项目目录
+|-- server// 新增 server 用于服务端项目目录
+|-- engine-template// 新增 engine-template 用于页面模板库目录
+|-- docs// 新增 docs 预留编写项目文档目录
+·
+···
+</code></pre></li>
+<li>这样的话 我们需要再把我们webpack配置文件稍作一下调整，首先是把原先的编译指向src的目录改成client，其次为了 npm run build 能正常编译 client 我们也需要为 babel-loader 再增加一个编译目录：</li>
+</ul>
+<ul>
+<li>根目录新增vue.config.js,目的是为了改造项目入口,改为:client/main.js<pre><code>module.exports = {
+pages: {
+  index: {
+    entry: &quot;client/main.js&quot;
+  }
+}
+}
+</code></pre></li>
+<li>babel-loader能正常编译 client, engine-template目录， 在vue.config.js新增如下配置</li>
+</ul>
+<pre><code>// 扩展 webpack 配置
+chainWebpack: config =&gt; {
+    config.module
+    .rule(&#39;js&#39;)
+    .include.add(/engine-template/).end()
+    .include.add(/client/).end()
+    .use(&#39;babel&#39;)
+    .loader(&#39;babel-loader&#39;)
+    .tap(options =&gt; {
+    // 修改它的选项...
+    return options
+    })
+}
+</code></pre><p>这样我们搭建起来一个简易的项目目录结构。</p>
+<h3 id="工程目录结构"><a href="#工程目录结构" class="headerlink" title="工程目录结构"></a>工程目录结构</h3><pre><code>|-- client--------前端项目界面代码
+        |--common--------前端界面对应静态资源
+        |--components--------组件
+        |--config--------配置文件
+        |--eventBus--------eventBus
+        |--filter--------过滤器
+        |--mixins--------混入
+        |--pages--------页面
+        |--router--------路由配置
+        |--store--------vuex状态管理
+        |--service--------axios封装
+        |--App.vue--------App
+        |--main.js--------入口文件
+        |--permission.js--------权限控制
+|-- server--------服务器端项目代码
+        |--confog--------数据库链接相关
+        |--middleware--------中间件
+        |--models--------Schema和Model
+        |--routes--------路由
+        |--views--------ejs页面模板
+        |--public--------静态资源
+        |--utils--------工具方法
+        |--app.js--------服务端入口
+|-- common--------前后端公用代码模块（如加解密）
+|-- engine-template--------页面模板引擎，使用webpack打包成js提供页面引用
+|-- docs--------预留编写项目文档目录
+|-- config.json--------配置文件
+</code></pre><h3 id="前端编辑器实现"><a href="#前端编辑器实现" class="headerlink" title="前端编辑器实现"></a>前端编辑器实现</h3><p>编辑器的实现思路是：编辑器生成页面JSON数据，服务端负责存取JSON数据，渲染时从服务端取数据JSON交给前端模板处理。</p>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>确认了实现逻辑，数据结构也是非常重要的，把一个页面定义成一个JSON数据，数据结构大致是这样的：</p>
+<h5 id="页面工程数据接口"><a href="#页面工程数据接口" class="headerlink" title="页面工程数据接口"></a>页面工程数据接口</h5><pre><code> {
+    title: &#39;&#39;, // 标题
+    description: &#39;&#39;, //描述
+    coverImage: &#39;&#39;, // 封面
+    auther: &#39;&#39;, // 作者
+    script: &#39;&#39;, // 页面插入脚本
+    width: 375, // 高
+    height: 644, // 宽
+    pages: [], // 多页页面
+    shareConfig: {}, // 微信分享配置
+    pageMode: 0, // 渲染模式，用于扩展多种模式渲染，翻页h5/长页/PC页面等等
+}
+</code></pre><h4 id="多页页面pages其中一页数据结构："><a href="#多页页面pages其中一页数据结构：" class="headerlink" title="多页页面pages其中一页数据结构："></a>多页页面pages其中一页数据结构：</h4><pre><code>{
+    name: &#39;&#39;,
+    elements: [], // 页面元素
+    commonStyle: {
+    backgroundColor: &#39;&#39;,
+    backgroundImage: &#39;&#39;,
+    backgroundSize: &#39;cover&#39;
+    },
+    config: {}
+}
+</code></pre><h4 id="元素数据结构："><a href="#元素数据结构：" class="headerlink" title="元素数据结构："></a>元素数据结构：</h4><pre><code>{
+    elName: &#39;&#39;, // 组件名
+    animations: [], // 图层的动画,可以支持多个动画
+    commonStyle: {}, // 公共样式，默认样式
+    events: [], // 事件配置数据，每个图层可以添加多个事件
+    propsValue: {}, // 属性参数
+    value: &#39;&#39;, // 绑定值
+    valueType: &#39;String&#39;, // 值类型
+    isForm: false// 是否是表单控件，用于表单提交时获取表单数据
+}
+</code></pre><h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><p>编辑器核心代码，基于 Vue 动态组件特性实现：</p>
+<pre><code>&lt;div 
+   v-for=&quot;item in activePage.element&quot;
+   :key=&quot;item.uuid&quot;
+   :style=&quot;getCommonStyle(item.commonStyle)&quot;
+   :active=&quot;item.uuid === activeElementUUID&quot;&gt;
+   &lt;component :is=&quot;item.elName&quot; v-bind=&quot;item&quot; /&gt;
+&lt;/div&gt;
+</code></pre><h3 id="画板元素渲染"><a href="#画板元素渲染" class="headerlink" title="画板元素渲染"></a>画板元素渲染</h3><p>编辑画板只需要循环遍历pages[i].elements数组，将里面的元素组件JSON数据取出，通过动态组件渲染出各个组件，支持拖拽改变位置尺寸.</p>
+<h3 id="元素组件管理"><a href="#元素组件管理" class="headerlink" title="元素组件管理"></a>元素组件管理</h3><p>在client目录新建plugins来管理组件库。也可以将该组件库发到npm上工程中通过npm管理</p>
+<h3 id="组件库"><a href="#组件库" class="headerlink" title="组件库"></a>组件库</h3><p>编写组件，考虑的是组件库，所以我们竟可能让我们的组件支持全局引入和按需引入，如果全局引入，那么所有的组件需要要注册到Vue component 上，并导出：</p>
+<h4 id="client-plugins下新建index-js入口文件"><a href="#client-plugins下新建index-js入口文件" class="headerlink" title="client/plugins下新建index.js入口文件"></a>client/plugins下新建index.js入口文件</h4><pre><code>/**
+ * 组件库入口
+ * */
+    import Text from&#39;./text&#39;
+    // 所有组件列表
+    const components = [
+        Text
+    ]
+    // 定义 install 方法，接收 Vue 作为参数
+    const install = function (Vue) {
+    // 判断是否安装，安装过就不继续往下执行
+    if (install.installed) return
+        install.installed = true
+        // 遍历注册所有组件
+        components.map(component =&gt; Vue.component(component.name, component))
+    }
+
+    // 检测到 Vue 才执行，毕竟我们是基于 Vue 的
+        if (typeofwindow !== &#39;undefined&#39; &amp;&amp; window.Vue) {
+        install(window.Vue)
+    }
+
+    exportdefault {
+        install,
+        // 所有组件，必须具有 install，才能使用     Vue.use()
+        Text
+    }
+</code></pre><h3 id="组件开发"><a href="#组件开发" class="headerlink" title="组件开发"></a>组件开发</h3><p>示例：text文本组件</p>
+<p>client/plugins下新建text组件目录</p>
+<pre><code> |-- text                --------text组件
+        |--src              --------资源
+        |--index.vue    --------组件
+        |--index.js         --------入口
+</code></pre><p>text/index.js</p>
+<pre><code>// 为组件提供 install 方法，供组件对外按需引入
+    import Component from&#39;./src/index&#39;
+    Component.install = Vue =&gt; {
+    Vue.component(Component.name, Component)
+    }
+    exportdefault Component
+</code></pre><p>text/src/index.vue</p>
+<pre><code>    &lt;!--text.vue--&gt;
+    &lt;template&gt;
+      &lt;div class=&quot;qk-text&quot;&gt;
+        {{text}}
+      &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+    export default {
+    name: &#39;QkText&#39;, // 这个名字很重要，它就是未来的标签名&lt;qk-text&gt;&lt;/qk-text&gt;
+    props: {
+    text: {
+    type: String,
+    default: &#39;这是一段文字&#39;
+          }
+    }
+    }
+    &lt;/script&gt;
+
+    &lt;style lang=&quot;scss&quot; scoped&gt;
+    &lt;/style&gt;
+</code></pre><h4 id="编辑器里使用组件库："><a href="#编辑器里使用组件库：" class="headerlink" title="编辑器里使用组件库："></a>编辑器里使用组件库：</h4><pre><code>    // 引入组件库
+    import QKUI from&#39;client/plugins/index&#39;
+    // 注册组件库
+    Vue.use(QKUI)
+
+    // 使用：
+    &lt;qk-text text=&quot;这是一段文字&quot;&gt;&lt;/qk-text&gt;
+</code></pre><h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>Quark-h5编辑器左侧选择组件区域可以通过一个配置文件定义可选组件新建一个ele-config.js配置文件：</p>
+<pre><code>exportdefault [
+    {
+    title: &#39;基础组件&#39;,
+    components: [
+    {
+    elName: &#39;qk-text&#39;, // 组件名，与组件库名称一致
+    title: &#39;文字&#39;,
+    icon: &#39;iconfont iconwenben&#39;,
+    // 给每个组件配置默认显示样式
+    defaultStyle: {
+    height: 40
+    }
+    }
+    ]
+    },
+    {
+    title: &#39;表单组件&#39;,
+    components: []
+    },
+    {
+    title: &#39;功能组件&#39;,
+    components: []
+    },
+    {
+    title: &#39;业务组件&#39;,
+    components: []
+    }
+    ]
+</code></pre><p>公共方法中提供一个function 通过组件名和默认样式获取元素组件JSON，getElementConfigJson(elName, defaultStyle)方法</p>
+<h3 id="封装一个动画执行方法"><a href="#封装一个动画执行方法" class="headerlink" title="封装一个动画执行方法"></a>封装一个动画执行方法</h3><pre><code>    /**
+     * 动画方法， 将动画css加入到元素上，返回promise提供执行后续操作（将动画重置）
+     * @param $el 当前被执行动画的元素
+     * @param animationList 动画列表
+     * @param isDebugger 动画列表
+     * @returns {Promise&lt;void&gt;}
+     */
+    exportdefaultasyncfunction runAnimation($el, animationList = [], isDebug , callback){
+    let playFn = function (animation) {
+    returnnewPromise(resolve =&gt; {
+    $el.style.animationName =  animation.type
+    $el.style.animationDuration =  `${animation.duration}s`
+    // 如果是循环播放就将循环次数置为1，这样有效避免编辑时因为预览循环播放组件播放动画无法触发animationend来暂停组件动画
+    $el.style.animationIterationCount =  animation.infinite ? (isDebug ? 1 : &#39;infinite&#39;) : animation.interationCount
+    $el.style.animationDelay =  `${animation.delay}s`
+    $el.style.animationFillMode =  &#39;both&#39;let resolveFn = function(){
+    $el.removeEventListener(&#39;animationend&#39;, resolveFn, false);
+    $el.addEventListener(&#39;animationcancel&#39;, resolveFn, false);
+    resolve()
+    }
+    $el.addEventListener(&#39;animationend&#39;, resolveFn, false)
+    $el.addEventListener(&#39;animationcancel&#39;, resolveFn, false);
+    })
+    }
+    for(let i = 0, len = animationList.length; i &lt; len; i++){
+    await playFn(animationList[i])
+    }
+    if(callback){
+    callback()
+    }
+    }
+</code></pre><p>animationIterationCount 如果是编辑模式的化动画只执行一次，不然无法监听到动画结束animationend事件</p>
+<p>执行动画前先将元素样式style缓存起来，当动画执行完再将原样式赋值给元素</p>
+<pre><code>   let cssText = this.$el.style.cssText;
+    runAnimations(this.$el, animations, true, () =&gt; {
+       this.$el.style.cssText = cssText
+    })
+</code></pre><h3 id="psd设计图导入生成h5页面"><a href="#psd设计图导入生成h5页面" class="headerlink" title="psd设计图导入生成h5页面"></a>psd设计图导入生成h5页面</h3><p>将psd每个设计图中的每个图层导出成图片保存到静态资源服务器中，</p>
+<p>服务端安装psd依赖</p>
+<pre><code>    cnpm install psd --save
+</code></pre><h4 id="加入psd-js依赖，并且提供接口来处理数据"><a href="#加入psd-js依赖，并且提供接口来处理数据" class="headerlink" title="加入psd.js依赖，并且提供接口来处理数据"></a>加入psd.js依赖，并且提供接口来处理数据</h4><pre><code>var PSD = require(&#39;psd&#39;);
+    router.post(&#39;/psdPpload&#39;,async ctx=&gt;{
+    const file = ctx.request.files.file; // 获取上传文件
+    let psd = await PSD.open(file.path)
+    var timeStr = + newDate();
+    let descendantsList = psd.tree().descendants();
+    descendantsList.reverse();
+    let psdSourceList = []
+    let currentPathDir = `public/upload_static/psd_image/${timeStr}`
+    for (var i = 0; i &lt; descendantsList.length; i++){
+    if (descendantsList[i].isGroup()) continue;
+    if (!descendantsList[i].visible) continue;
+    try{
+    await descendantsList[i].saveAsPng(path.join(ctx.state.SERVER_PATH, currentPathDir + `/${i}.png`))
+    psdSourceList.push({
+    ...descendantsList[i].export(),
+    type: &#39;picture&#39;,
+    imageSrc: ctx.state.BASE_URL + `/upload_static/psd_image/${timeStr}/${i}.png`,
+    })
+    }catch (e) {
+    // 转换不出来的图层先忽略
+    continue;
+    }
+    }
+    ctx.body = {
+        elements: psdSourceList,
+        document: psd.tree().export().document
+    };
+})
+</code></pre><p>最后把获取的数据转义并返回给前端，前端获取到数据后使用系统统一方法，遍历添加统一图片组件</p>
+<h2 id="后端服务"><a href="#后端服务" class="headerlink" title="后端服务"></a>后端服务</h2><h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>工程目录上文已给出，也可以使用 koa-generator 脚手架工具生成</p>
+<h5 id="ejs-template-模板引擎配置"><a href="#ejs-template-模板引擎配置" class="headerlink" title="ejs-template 模板引擎配置"></a>ejs-template 模板引擎配置</h5><p>app.js</p>
+<pre><code>//配置ejs-template 模板引擎
+render(app, {
+    root: path.join(__dirname, &#39;views&#39;),
+    layout: false,
+    viewExt: &#39;html&#39;,
+    cache: false,
+    debug: false
+});
+</code></pre><h3 id="koa-static静态资源服务"><a href="#koa-static静态资源服务" class="headerlink" title="koa-static静态资源服务"></a>koa-static静态资源服务</h3><p>因为html2canvas需要图片允许跨域，所以在静态资源服务中所有资源请求设置’Access-Control-Allow-Origin’:’*’</p>
+<p>app.js</p>
+<pre><code>//配置静态web
+app.use(koaStatic(__dirname + &#39;/public&#39;), { gzip: true, setHeaders: function(res){
+    res.header( &#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;)
+}});
+</code></pre><h4 id="修改路由的注册方式，通过遍历routes文件夹读取文件"><a href="#修改路由的注册方式，通过遍历routes文件夹读取文件" class="headerlink" title="修改路由的注册方式，通过遍历routes文件夹读取文件"></a>修改路由的注册方式，通过遍历routes文件夹读取文件</h4><p>app.js</p>
+<pre><code>const fs =  require(&#39;fs&#39;)
+fs.readdirSync(&#39;./routes&#39;).forEach(route=&gt; {
+    let api = require(`./routes/${route}`)
+    app.use(api.routes(), api.allowedMethods())
+})
+</code></pre><h4 id="添加jwt认证，同时过滤不需要认证的路由，如获取token"><a href="#添加jwt认证，同时过滤不需要认证的路由，如获取token" class="headerlink" title="添加jwt认证，同时过滤不需要认证的路由，如获取token"></a>添加jwt认证，同时过滤不需要认证的路由，如获取token</h4><p>app.js</p>
+<pre><code>const jwt = require(&#39;koa-jwt&#39;)
+app.use(jwt({ secret: &#39;yourstr&#39; }).unless({
+    path: [
+        /^\/$/, /\/token/, /\/wechat/,
+        { url: /\/papers/, methods: [&#39;GET&#39;] }
+    ]
+}));
+</code></pre><h4 id="中间件实现统一接口返回数据格式，全局错误捕获并响应"><a href="#中间件实现统一接口返回数据格式，全局错误捕获并响应" class="headerlink" title="中间件实现统一接口返回数据格式，全局错误捕获并响应"></a>中间件实现统一接口返回数据格式，全局错误捕获并响应</h4><p>middleware/formatresponse.js</p>
+<pre><code>module.exports = async (ctx, next) =&gt; {
+    await next().then(() =&gt; {
+    if (ctx.status === 200) {
+        ctx.body = {
+            message: &#39;成功&#39;,
+            code: 200,
+            body: ctx.body,
+            status: true
+        }
+    } elseif (ctx.status === 201) { // 201处理模板引擎渲染
+
+    } else {
+        ctx.body = {
+            message: ctx.body || &#39;接口异常，请重试&#39;,
+            code: ctx.status,
+            body: &#39;接口请求失败&#39;,
+            status: false
+        }
+    }
+    }).catch((err) =&gt; {
+    if (err.status === 401) {
+        ctx.status = 401;
+        ctx.body = {
+        code: 401,
+        status: false,
+        message: &#39;登录过期，请重新登录&#39;
+    }
+    } else {
+        throw err
+    }
+    })
+    }
+</code></pre><h3 id="koa2-cors跨域处理"><a href="#koa2-cors跨域处理" class="headerlink" title="koa2-cors跨域处理"></a>koa2-cors跨域处理</h3><p>当接口发布到线上，前端通过ajax请求时，会报跨域的错误。koa2使用koa2-cors这个库非常方便的实现了跨域配置，使用起来也很简单</p>
+<pre><code>const cors = require(&#39;koa2-cors&#39;);
+    app.use(cors());
+</code></pre><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><p>我们使用mongodb数据库，在koa2中使用mongoose这个库来管理整个数据库的操作。</p>
+<p>创建配置文件<br>根目录下新建config文件夹，新建mongo.js</p>
+<pre><code>   //config/mongo.js
+    const mongoose = require(&#39;mongoose&#39;).set(&#39;debug&#39;, true);
+    const options = {
+        autoReconnect: true
+    }
+
+    // username 数据库用户名
+    // password 数据库密码
+    // localhost 数据库ip
+    // dbname 数据库名称
+    const url = &#39;mongodb://username:password@localhost:27017/dbname&#39;
+
+    module.exports = {
+        connect: ()=&gt; {
+            mongoose.connect(url,options)
+            let db = mongoose.connection
+            db.on(&#39;error&#39;, console.error.bind(console, &#39;连接错误:&#39;));
+            db.once(&#39;open&#39;, ()=&gt; {
+                console.log(&#39;mongodb connect suucess&#39;);
+            })
+        }
+    }
+</code></pre><p>把mongodb配置信息放到config.json中统一管理</p>
+<p>然后在app.js中引入</p>
+<pre><code>const mongoConf = require(&#39;./config/mongo&#39;);
+    mongoConf.connect();
+</code></pre><h2 id="启动运行"><a href="#启动运行" class="headerlink" title="启动运行"></a>启动运行</h2><h4 id="启动前端"><a href="#启动前端" class="headerlink" title="启动前端"></a>启动前端</h4><pre><code>    npm run dev-client
+</code></pre><h4 id="启动服务端"><a href="#启动服务端" class="headerlink" title="启动服务端"></a>启动服务端</h4><pre><code>    npm run dev-server
+</code></pre><p>注意：如果没有生成过引擎模板js文件的，需要先编辑引擎模板，否则预览页面加载页面引擎.js 404报错</p>
+<h4 id="编译engine-js模板引擎"><a href="#编译engine-js模板引擎" class="headerlink" title="编译engine.js模板引擎"></a>编译engine.js模板引擎</h4><pre><code>    npm run lib:h5-swiper
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2020/05/11/quark_h5/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

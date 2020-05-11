@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img3.imgtn.bdimg.com/it/u=3843804769,4166221848&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >echarst记录</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <ul>
+<li>记录花了一天时间开发的一个时间联动的折线垂直图表</li>
+</ul>
+<pre><code>option = {
+    timeline: {
+        data: [
+            &#39;青盒子&#39;, &#39;红盒子&#39;, &#39;瞄金&#39;, &#39;雪涛&#39;
+        ],
+        axisType: &#39;category&#39;,
+        show: true,
+        autoPlay: false,
+        playInterval: 1000
+    },
+
+    options: [
+    {
+        title: {
+            text: &#39;青盒子现世后的价格走势&#39;,
+        },
+        grid: {
+            top: 80,
+            bottom: 100
+        },
+        tooltip: {
+            trigger: &#39;axis&#39;,
+            showContent:false,
+            formatter: function (params) {
+                 console.log(params)
+                 var html = &#39;&#39;;
+                 for(var i=0;i&lt;params.length;i++){
+                     html += &#39;出力: &#39; + params[i].data[0].toFixed(2) + &#39;&lt;br&gt;报价: &#39; + params[i].data[1].toFixed(2)+&#39;&lt;br&gt;&#39;;
+
+                 }
+                return html
+            }
+        },
+        xAxis: {
+            type: &#39;value&#39;,
+        },
+        yAxis: {
+            type: &#39;value&#39;,
+            name: &#39;单位：元&#39;
+        },
+        series: [{
+            id:&#39;a&#39;,
+            type: &#39;line&#39;,
+            symbolSize: 10,
+
+            label: {
+                normal: {
+                    show: false,
+                    position: &#39;top&#39;,
+                }
+            },
+            data: [[800,500], [950,500], [950,600], [1200,600]]
+        }]
+    },
+    {
+        title: {
+            text: &#39;青盒子现世后的价格走势&#39;,
+        },
+        grid: {
+            top: 80,
+            bottom: 100
+        },
+        tooltip: {
+            trigger: &#39;axis&#39;,
+             showContent:false,
+            formatter: function (params) {
+                 console.log(params)
+                 var html = &#39;&#39;;
+                 for(var i=0;i&lt;params.length;i++){
+                     html += &#39;出力: &#39; + params[i].data[0].toFixed(2) + &#39;&lt;br&gt;报价: &#39; + params[i].data[1].toFixed(2)+&#39;&lt;br&gt;&#39;;
+
+                 }
+                return html
+            }
+        },
+        xAxis: {
+            type: &#39;value&#39;,
+        },
+        yAxis: {
+            type: &#39;value&#39;,
+            name: &#39;单位：元&#39;
+        },
+        series: [{
+            id:&#39;a&#39;,
+            type: &#39;line&#39;,
+            symbolSize: 10,
+
+            data: [[750,900], [850,900], [850,600], [1000,600]]
+        }]
+    },
+    {
+        title: {
+            text: &#39;青盒子现世后的价格走势&#39;,
+        },
+        grid: {
+            top: 80,
+            bottom: 100
+        },
+        tooltip: {
+            trigger: &#39;axis&#39;,
+             showContent:false,
+            formatter: function (params) {
+                 console.log(params)
+                 var html = &#39;&#39;;
+                 for(var i=0;i&lt;params.length;i++){
+                     html += &#39;出力: &#39; + params[i].data[0].toFixed(2) + &#39;&lt;br&gt;报价: &#39; + params[i].data[1].toFixed(2)+&#39;&lt;br&gt;&#39;;
+
+                 }
+                return html
+            }
+        },
+        xAxis: {
+            type: &#39;value&#39;,
+        },
+        yAxis: {
+            type: &#39;value&#39;,
+            name: &#39;单位：元&#39;
+        },
+        series: [{
+            id:&#39;a&#39;,
+            type: &#39;line&#39;,
+            symbolSize: 10,
+            label: {
+                normal: {
+                    show: true,
+                    position: &#39;top&#39;,
+                }
+            },
+            data: [[850,800], [1050,800], [1050,600], [1300,600]]
+        }]
+    },
+    {
+        title: {
+            text: &#39;青盒子现世后的价格走势&#39;,
+        },
+        grid: {
+            top: 80,
+            bottom: 100
+        },
+        tooltip: {
+            trigger: &#39;axis&#39;,
+             showContent:false,
+            formatter: function (params) {
+                 console.log(params)
+                 var html = &#39;&#39;;
+                 for(var i=0;i&lt;params.length;i++){
+                     html += &#39;出力: &#39; + params[i].data[0].toFixed(2) + &#39;&lt;br&gt;报价: &#39; + params[i].data[1].toFixed(2)+&#39;&lt;br&gt;&#39;;
+
+                 }
+                return html
+            }
+        },
+        xAxis: {
+            type: &#39;value&#39;,
+        },
+        yAxis: {
+            type: &#39;value&#39;,
+            name: &#39;单位：元&#39;
+        },
+        series: [{
+            id:&#39;a&#39;,
+            type: &#39;line&#39;,
+            symbolSize: 10,
+            label: {
+                normal: {
+                    show: true,
+                    position: &#39;top&#39;,
+                }
+            },
+            data: [[950,1000], [1200,1000], [1200,600], [1300,600]]
+        }]
+    }
+
+    ]
+
+};
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/02/07/echarts/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

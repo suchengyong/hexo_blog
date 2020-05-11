@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/suchengyonglogo.png"/>
+	<link rel="shortcut icon" href="/img/suchengyonglogo.png">
+	<meta name="baidu-site-verification" content="3MRZfh0dC4" />
+	
+			
+    <title>
+    苏成勇个人博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">欢迎来到苏成勇个人博客</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Hexo/">Hexo</a></li><li><a class="category-link" href="/categories/canvas/">canvas</a></li><li><a class="category-link" href="/categories/js/">js</a></li><li><a class="category-link" href="/categories/前端开发/">前端开发</a></li><li><a class="category-link" href="/categories/小程序开发/">小程序开发</a></li><li><a class="category-link" href="/categories/移动端自适应/">移动端自适应</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/suchengyong" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://suchengyong.netlify.app" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		            
+		                <li><a href="https://simple-ui.netlify.app#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=236468560,4025329217&amp;fm=27&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >HTML5实现刮奖效果</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <ul>
+<li><p>要实现刮奖效果，最重要的是要找到一种方法：当刮开上层的涂层是就能看到下层的结果。而HTML5的canvas API中有一个属性globalCompositeOperation，这个属性有多个值，而实现刮奖效果要用到的值就是destination-out。意思就是：在已有内容和新图形不重叠的地方，已有内容保留，所有其他内容成为透明。这样可能不好理解，后面实现的时候会解释。有了globalCompositeOperation这个属性，实现过程就很简单了。</p>
+</li>
+<li><p>我们需要有两个层，上面一层肯定是一个canvas元素，因为要能刮开就要用到画布。下面一层其实用什么元素都可以，既然上层用的是canvas元素，下层我们也用canvas元素，下面是html内容：</p>
+</li>
+</ul>
+<pre><code class="bash"> &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;刮刮乐&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;canvas id=&quot;underCanvas&quot; width=300 height=300 style=&quot;position: absolute; left: 0;top: 0;&quot;&gt;&lt;/canvas&gt;
+    &lt;canvas id=&quot;upCanvas&quot; width=300 height=300 style=&quot;position: absolute; left: 0; top: 0;&quot;&gt;&lt;/canvas&gt;
+    &lt;script src=&quot;./scratch.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // 可能变化的值放在options中，方便修改
+        var options = {
+            text: {
+                fontWeight: &quot;bold&quot;,
+                fontSize: 30,
+                fontFamily: &quot;Arial&quot;,
+                align: &quot;center&quot;,
+                color: &#39;#F60&#39;
+            },
+            maskColor: &quot;red&quot;,
+            radius: 30,
+            awards: [&quot;一等奖&quot;, &quot;二等奖&quot;, &quot;三等奖&quot;, &quot;谢谢！&quot;]
+        };
+
+        new Scratch(options).init();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>先实现一个构造函数：</li>
+</ul>
+<pre><code class="bash">    var Scratch = function (options) {
+    // 下层画布元素
+    this.underCanvas = doc.getElementById(&quot;underCanvas&quot;);
+    // 上层画布元素
+    this.upCanvas = doc.getElementById(&quot;upCanvas&quot;);
+    // 获取下层画布绘图上下文
+    this.underCtx = this.underCanvas.getContext(&quot;2d&quot;);
+    // 获取上层画布绘图上下文
+    this.upCtx = this.upCanvas.getContext(&quot;2d&quot;);
+       // 画布宽度
+    this.width = this.upCanvas.width;
+    // 画布高度
+    this.height = this.upCanvas.height;
+    // 自定义选项
+    this.options = options;
+    this.award = null;
+};
+</code></pre>
+<ul>
+<li>在下层画布上画上刮奖的内容：</li>
+</ul>
+<pre><code>drawText: function () {
+    var ctx = this.underCtx;
+    var text = this.options.text;
+    ctx.font = text.fontWeight + &quot; &quot; + text.fontSize + &#39;px &#39; + text.fontFamily;
+    ctx.textAlign = text.align;
+    ctx.fillStyle = text.color;
+    this.award = this.options.awards[(Math.random() * this.options.awards.length) | 0]; //随机抽奖
+    ctx.fillText(this.award, this.width / 2, this.height / 2 + text.fontSize / 2);
+}
+</code></pre><ul>
+<li>这边奖的内容是随机出现的，因为奖肯定有很多种，可以用一个数组来存放奖的内容，然后随机显示</li>
+</ul>
+<pre><code>this.award = this.options.awards[(Math.random() * this.options.awards.length) | 0];
+</code></pre><ul>
+<li>然后在上层画布中画一层涂层：</li>
+</ul>
+<pre><code>drawMask: function () {
+    var ctx = this.upCtx;
+    ctx.fillStyle = this.options.maskColor;
+    ctx.fillRect(0, 0, this.width, this.height);
+    ctx.globalCompositeOperation = &#39;destination-out&#39;;
+}
+</code></pre><ul>
+<li><p>在上层画布中用了globalCompositeOperation这个属性，当再在画布上画东西时，那么后面画的内容和涂层重合的部分将变透明，而其余涂层部分不变。就是利用了这个原理实现了刮奖效果。</p>
+</li>
+<li><p>需要刮开上层的涂层，就需要在上层画布上绑定事件：</p>
+</li>
+</ul>
+<pre><code>addEvent: function () {
+    var that = this;
+    var upCanvas = this.upCanvas;
+    var callback1, callback2, callback3;
+    upCanvas.addEventListener(&quot;mousedown&quot;, callback1 = function (evt) {
+        upCanvas.addEventListener(&quot;mousemove&quot;, callback2 = function (evt) {
+            var x = evt.clientX - upCanvas.offsetLeft;
+            var y = evt.clientY - upCanvas.offsetTop;
+            var ctx = that.upCtx;
+            var options = that.options;
+            ctx.beginPath();
+            var gradient = ctx.createRadialGradient(x, y, 0, x, y, options.radius);
+            // 其实这边的颜色值是可以随便写的，因为都会变成透明，重要的是透明度
+            gradient.addColorStop(0, &quot;rgba(255, 255, 255, 0.5)&quot;);
+            gradient.addColorStop(1, &quot;rgba(255, 255, 255, 0)&quot;);
+            // 也可以不用渐变，直接用一种颜色，但渐变效果更好
+            ctx.fillStyle = gradient;
+            ctx.arc(x, y, options.radius, 0, Math.PI * 2, true);
+            ctx.fill();
+            ctx.closePath();
+            // 当刮开部分&gt;80%的时候提醒刮奖结果，这个可以自己设置
+            if (that.result() &gt; 0.8) {
+                alert(that.award);
+                upCanvas.removeEventListener(&quot;mousemove&quot;, callback2);
+            }
+        }, false);
+        doc.addEventListener(&quot;mouseup&quot;, callback3 = function () {
+            upCanvas.removeEventListener(&quot;mousemove&quot;, callback2);
+            doc.removeEventListener(&quot;mouseup&quot;, callback3);
+        }, false);
+    }, false);
+}
+</code></pre><ul>
+<li>我们需要在刮到一定程度时提醒刮奖的结果:</li>
+</ul>
+<pre><code>result: function () {
+    // 获取文字部分的宽、高
+    var textWidth = this.options.text.fontSize * this.award.length;
+    var textHeight = this.options.text.fontSize;
+    // 获取文字部分的像素，这样可以根据刮开文字的部分占全部文字部分的百分比来提示结果，
+    比如说在刮开80%的时候提示刮奖结果
+    var imgData = this.upCtx.getImageData(this.width / 2 - textWidth / 2, 
+    this.height / 2 - textHeight / 2, textWidth, textHeight);
+    var pixelsArr = imgData.data;
+    var transPixelsArr = [];
+    for (var i = 0, j = pixelsArr.length; i &lt; j; i += 4) {
+        // a代表透明度
+        var a = pixelsArr[i + 3];
+        // 渐变的透明度＜=0.5，其实透明度的值是介于0~255之间的，0.5 * 255 = 127.5就是a的值
+        if (a &lt; 128) {
+            transPixelsArr.push(a);
+        }
+    }
+    // 小于128的透明度的值的个数占总透明度的的个数的百分比
+    return transPixelsArr.length / (pixelsArr.length / 4);
+}
+</code></pre><ul>
+<li><p>上面用到了getImageData()方法，这个方法返回像素数据。重要的是我们只是获取了下层文字部分的像素数据，因为我们只需要知道刮开的文字部分占全部文字部分的百分比。</p>
+</li>
+<li><p>调用构造函数时，把可能改变的东西放在一个对象options中传递给构造函数：</p>
+</li>
+</ul>
+<pre><code>// 可能变化的值放在options中，方便修改
+var options = {
+    // 文字部分的样式
+    text: {
+        fontWeight: &quot;bold&quot;,
+        fontSize: 30,
+        fontFamily: &quot;Arial&quot;,
+        align: &quot;center&quot;,
+        color: &#39;#F60&#39;
+    },
+    // 图层颜色
+    maskColor: &quot;red&quot;,
+    // 画逼半径
+    radius: 20,
+    // 奖项
+    awards: [&quot;一等奖&quot;, &quot;二等奖&quot;, &quot;三等奖&quot;, &quot;谢谢！&quot;]
+};
+
+new Scratch(options).init();
+</code></pre><ul>
+<li>DEMO：<a href="http://lwzhang.github.io/scratch/scratch.html">http://lwzhang.github.io/scratch/scratch.html</a></li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2018/02/12/imgtransform/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytsgGBWa';
+var conf = 'prod_d517f84e6eeb56312a39e3df9a6c43d8';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2020总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
