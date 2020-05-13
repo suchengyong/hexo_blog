@@ -1,6 +1,8 @@
 # hexo_blog
 这是一个使用hexo搭建的个人博客
 
+[博客文档](https://suchengyong.netlify.app)
+
 ## 本地启动测试
 ```
 $ hexo server
